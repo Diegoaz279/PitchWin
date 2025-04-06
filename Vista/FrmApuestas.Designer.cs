@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmApuestas));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -49,7 +49,7 @@
             lblPartido1_2 = new Label();
             tableLayoutPanel6 = new TableLayoutPanel();
             lblHoraPartido1 = new Label();
-            btnApostarIncio1 = new Guna.UI2.WinForms.Guna2Button();
+            btnApostar1 = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
             tableLayoutPanel8 = new TableLayoutPanel();
             pictureBox4 = new PictureBox();
@@ -61,7 +61,7 @@
             lblPartido2_2 = new Label();
             tableLayoutPanel11 = new TableLayoutPanel();
             lblHoraPartido2 = new Label();
-            btnApostarIncio2 = new Guna.UI2.WinForms.Guna2Button();
+            btnApostar2 = new Guna.UI2.WinForms.Guna2Button();
             panel3 = new Panel();
             tableLayoutPanel13 = new TableLayoutPanel();
             pictureBoxPartido3_1 = new PictureBox();
@@ -72,7 +72,7 @@
             lblPartido3_2 = new Label();
             tableLayoutPanel16 = new TableLayoutPanel();
             lblHoraPartido3 = new Label();
-            btnApostarIncio3 = new Guna.UI2.WinForms.Guna2Button();
+            btnApostar3 = new Guna.UI2.WinForms.Guna2Button();
             pictureBox7 = new PictureBox();
             panel4 = new Panel();
             tableLayoutPanel18 = new TableLayoutPanel();
@@ -85,7 +85,7 @@
             lblPartido4_2 = new Label();
             tableLayoutPanel21 = new TableLayoutPanel();
             lblHoraPartido4 = new Label();
-            btnApostarIncio4 = new Guna.UI2.WinForms.Guna2Button();
+            btnApostar4 = new Guna.UI2.WinForms.Guna2Button();
             tableLayoutPanel3 = new TableLayoutPanel();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
@@ -195,7 +195,7 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.Image = Properties.Resources.ChatGPT_Image_1_abr_2025__10_41_29_a_m_;
+            pictureBox1.Image = Properties.Resources.VS;
             pictureBox1.Location = new Point(471, 14);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(56, 81);
@@ -292,7 +292,7 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0F));
             tableLayoutPanel6.Controls.Add(lblHoraPartido1, 1, 0);
-            tableLayoutPanel6.Controls.Add(btnApostarIncio1, 1, 1);
+            tableLayoutPanel6.Controls.Add(btnApostar1, 1, 1);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Location = new Point(986, 14);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -315,26 +315,26 @@
             lblHoraPartido1.TabIndex = 0;
             lblHoraPartido1.Text = "HORA:";
             // 
-            // btnApostarIncio1
+            // btnApostar1
             // 
-            btnApostarIncio1.BorderRadius = 10;
-            btnApostarIncio1.CustomizableEdges = customizableEdges1;
-            btnApostarIncio1.DisabledState.BorderColor = Color.DarkGray;
-            btnApostarIncio1.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnApostarIncio1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnApostarIncio1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnApostarIncio1.Dock = DockStyle.Fill;
-            btnApostarIncio1.FillColor = Color.FromArgb(230, 89, 25);
-            btnApostarIncio1.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostarIncio1.ForeColor = Color.White;
-            btnApostarIncio1.Location = new Point(3, 24);
-            btnApostarIncio1.MaximumSize = new Size(150, 60);
-            btnApostarIncio1.Name = "btnApostarIncio1";
-            btnApostarIncio1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnApostarIncio1.Size = new Size(112, 46);
-            btnApostarIncio1.TabIndex = 2;
-            btnApostarIncio1.Text = "APOSTAR";
-            btnApostarIncio1.Click += btnApostarIncio1_Click;
+            btnApostar1.BorderRadius = 10;
+            btnApostar1.CustomizableEdges = customizableEdges9;
+            btnApostar1.DisabledState.BorderColor = Color.DarkGray;
+            btnApostar1.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnApostar1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnApostar1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnApostar1.Dock = DockStyle.Fill;
+            btnApostar1.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar1.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnApostar1.ForeColor = Color.White;
+            btnApostar1.Location = new Point(3, 24);
+            btnApostar1.MaximumSize = new Size(150, 60);
+            btnApostar1.Name = "btnApostar1";
+            btnApostar1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnApostar1.Size = new Size(112, 46);
+            btnApostar1.TabIndex = 2;
+            btnApostar1.Text = "APOSTAR";
+            btnApostar1.Click += btnApostarIncio1_Click;
             // 
             // panel2
             // 
@@ -381,7 +381,7 @@
             // pictureBox4
             // 
             pictureBox4.Anchor = AnchorStyles.None;
-            pictureBox4.Image = Properties.Resources.ChatGPT_Image_1_abr_2025__10_41_29_a_m_;
+            pictureBox4.Image = Properties.Resources.VS;
             pictureBox4.Location = new Point(471, 13);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(56, 78);
@@ -478,7 +478,7 @@
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0F));
             tableLayoutPanel11.Controls.Add(lblHoraPartido2, 1, 0);
-            tableLayoutPanel11.Controls.Add(btnApostarIncio2, 1, 1);
+            tableLayoutPanel11.Controls.Add(btnApostar2, 1, 1);
             tableLayoutPanel11.Dock = DockStyle.Fill;
             tableLayoutPanel11.Location = new Point(986, 13);
             tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -501,25 +501,25 @@
             lblHoraPartido2.TabIndex = 0;
             lblHoraPartido2.Text = "HORA:";
             // 
-            // btnApostarIncio2
+            // btnApostar2
             // 
-            btnApostarIncio2.BorderRadius = 10;
-            btnApostarIncio2.CustomizableEdges = customizableEdges3;
-            btnApostarIncio2.DisabledState.BorderColor = Color.DarkGray;
-            btnApostarIncio2.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnApostarIncio2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnApostarIncio2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnApostarIncio2.Dock = DockStyle.Fill;
-            btnApostarIncio2.FillColor = Color.FromArgb(230, 89, 25);
-            btnApostarIncio2.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostarIncio2.ForeColor = Color.White;
-            btnApostarIncio2.Location = new Point(3, 22);
-            btnApostarIncio2.MaximumSize = new Size(150, 60);
-            btnApostarIncio2.Name = "btnApostarIncio2";
-            btnApostarIncio2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnApostarIncio2.Size = new Size(112, 45);
-            btnApostarIncio2.TabIndex = 2;
-            btnApostarIncio2.Text = "APOSTAR";
+            btnApostar2.BorderRadius = 10;
+            btnApostar2.CustomizableEdges = customizableEdges11;
+            btnApostar2.DisabledState.BorderColor = Color.DarkGray;
+            btnApostar2.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnApostar2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnApostar2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnApostar2.Dock = DockStyle.Fill;
+            btnApostar2.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar2.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnApostar2.ForeColor = Color.White;
+            btnApostar2.Location = new Point(3, 22);
+            btnApostar2.MaximumSize = new Size(150, 60);
+            btnApostar2.Name = "btnApostar2";
+            btnApostar2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnApostar2.Size = new Size(112, 45);
+            btnApostar2.TabIndex = 2;
+            btnApostar2.Text = "APOSTAR";
             // 
             // panel3
             // 
@@ -652,7 +652,7 @@
             tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0F));
             tableLayoutPanel16.Controls.Add(lblHoraPartido3, 1, 0);
-            tableLayoutPanel16.Controls.Add(btnApostarIncio3, 1, 1);
+            tableLayoutPanel16.Controls.Add(btnApostar3, 1, 1);
             tableLayoutPanel16.Dock = DockStyle.Fill;
             tableLayoutPanel16.Location = new Point(988, 13);
             tableLayoutPanel16.Name = "tableLayoutPanel16";
@@ -675,30 +675,30 @@
             lblHoraPartido3.TabIndex = 0;
             lblHoraPartido3.Text = "HORA:";
             // 
-            // btnApostarIncio3
+            // btnApostar3
             // 
-            btnApostarIncio3.BorderRadius = 10;
-            btnApostarIncio3.CustomizableEdges = customizableEdges5;
-            btnApostarIncio3.DisabledState.BorderColor = Color.DarkGray;
-            btnApostarIncio3.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnApostarIncio3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnApostarIncio3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnApostarIncio3.Dock = DockStyle.Fill;
-            btnApostarIncio3.FillColor = Color.FromArgb(230, 89, 25);
-            btnApostarIncio3.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostarIncio3.ForeColor = Color.White;
-            btnApostarIncio3.Location = new Point(3, 22);
-            btnApostarIncio3.MaximumSize = new Size(150, 60);
-            btnApostarIncio3.Name = "btnApostarIncio3";
-            btnApostarIncio3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnApostarIncio3.Size = new Size(112, 47);
-            btnApostarIncio3.TabIndex = 2;
-            btnApostarIncio3.Text = "APOSTAR";
+            btnApostar3.BorderRadius = 10;
+            btnApostar3.CustomizableEdges = customizableEdges13;
+            btnApostar3.DisabledState.BorderColor = Color.DarkGray;
+            btnApostar3.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnApostar3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnApostar3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnApostar3.Dock = DockStyle.Fill;
+            btnApostar3.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar3.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnApostar3.ForeColor = Color.White;
+            btnApostar3.Location = new Point(3, 22);
+            btnApostar3.MaximumSize = new Size(150, 60);
+            btnApostar3.Name = "btnApostar3";
+            btnApostar3.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnApostar3.Size = new Size(112, 47);
+            btnApostar3.TabIndex = 2;
+            btnApostar3.Text = "APOSTAR";
             // 
             // pictureBox7
             // 
             pictureBox7.Anchor = AnchorStyles.None;
-            pictureBox7.Image = Properties.Resources.ChatGPT_Image_1_abr_2025__10_41_29_a_m_;
+            pictureBox7.Image = Properties.Resources.VS;
             pictureBox7.Location = new Point(471, 13);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(56, 81);
@@ -751,7 +751,7 @@
             // pictureBox10
             // 
             pictureBox10.Anchor = AnchorStyles.None;
-            pictureBox10.Image = Properties.Resources.ChatGPT_Image_1_abr_2025__10_41_29_a_m_;
+            pictureBox10.Image = Properties.Resources.VS;
             pictureBox10.Location = new Point(471, 13);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(56, 81);
@@ -848,7 +848,7 @@
             tableLayoutPanel21.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel21.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0F));
             tableLayoutPanel21.Controls.Add(lblHoraPartido4, 1, 0);
-            tableLayoutPanel21.Controls.Add(btnApostarIncio4, 1, 1);
+            tableLayoutPanel21.Controls.Add(btnApostar4, 1, 1);
             tableLayoutPanel21.Dock = DockStyle.Fill;
             tableLayoutPanel21.Location = new Point(986, 13);
             tableLayoutPanel21.Name = "tableLayoutPanel21";
@@ -871,25 +871,25 @@
             lblHoraPartido4.TabIndex = 0;
             lblHoraPartido4.Text = "HORA:";
             // 
-            // btnApostarIncio4
+            // btnApostar4
             // 
-            btnApostarIncio4.BorderRadius = 10;
-            btnApostarIncio4.CustomizableEdges = customizableEdges7;
-            btnApostarIncio4.DisabledState.BorderColor = Color.DarkGray;
-            btnApostarIncio4.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnApostarIncio4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnApostarIncio4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnApostarIncio4.Dock = DockStyle.Fill;
-            btnApostarIncio4.FillColor = Color.FromArgb(230, 89, 25);
-            btnApostarIncio4.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostarIncio4.ForeColor = Color.White;
-            btnApostarIncio4.Location = new Point(3, 22);
-            btnApostarIncio4.MaximumSize = new Size(150, 60);
-            btnApostarIncio4.Name = "btnApostarIncio4";
-            btnApostarIncio4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnApostarIncio4.Size = new Size(112, 47);
-            btnApostarIncio4.TabIndex = 2;
-            btnApostarIncio4.Text = "APOSTAR";
+            btnApostar4.BorderRadius = 10;
+            btnApostar4.CustomizableEdges = customizableEdges15;
+            btnApostar4.DisabledState.BorderColor = Color.DarkGray;
+            btnApostar4.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnApostar4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnApostar4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnApostar4.Dock = DockStyle.Fill;
+            btnApostar4.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar4.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnApostar4.ForeColor = Color.White;
+            btnApostar4.Location = new Point(3, 22);
+            btnApostar4.MaximumSize = new Size(150, 60);
+            btnApostar4.Name = "btnApostar4";
+            btnApostar4.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnApostar4.Size = new Size(112, 47);
+            btnApostar4.TabIndex = 2;
+            btnApostar4.Text = "APOSTAR";
             // 
             // tableLayoutPanel3
             // 
@@ -1034,9 +1034,9 @@
         private Label lblPartido4_2;
         private TableLayoutPanel tableLayoutPanel21;
         private Label lblHoraPartido4;
-        private Guna.UI2.WinForms.Guna2Button btnApostarIncio2;
-        private Guna.UI2.WinForms.Guna2Button btnApostarIncio3;
-        private Guna.UI2.WinForms.Guna2Button btnApostarIncio4;
-        private Guna.UI2.WinForms.Guna2Button btnApostarIncio1;
+        private Guna.UI2.WinForms.Guna2Button btnApostar2;
+        private Guna.UI2.WinForms.Guna2Button btnApostar3;
+        private Guna.UI2.WinForms.Guna2Button btnApostar4;
+        private Guna.UI2.WinForms.Guna2Button btnApostar1;
     }
 }

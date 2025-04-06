@@ -180,7 +180,7 @@
             btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 40, 80);
             btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
             btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Inria Sans", 14F);
+            btnExit.Font = new Font("Inria Sans", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExit.ForeColor = Color.FromArgb(226, 98, 34);
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageAlign = ContentAlignment.MiddleLeft;

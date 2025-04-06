@@ -46,37 +46,37 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            label1 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
             label2 = new Label();
             tableLayoutPanel4 = new TableLayoutPanel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnVerificarTicket = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPagarTicketIdTicket = new Guna.UI2.WinForms.Guna2TextBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             tableLayoutPanel7 = new TableLayoutPanel();
-            txtConfirmacionApuestaFecha = new Guna.UI2.WinForms.Guna2TextBox();
-            txtConfirmacionApuestaGnanciaEstimada = new Guna.UI2.WinForms.Guna2TextBox();
-            txtConfirmacionApuestaMonto = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPagarTicketFecha = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPagarTicketGanancia = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPagarTicketMonto = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             label5 = new Label();
             label8 = new Label();
             label6 = new Label();
             label7 = new Label();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPagarTicketEquipo = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPagarTicketTipoCuota = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
             tableLayoutPanel8 = new TableLayoutPanel();
-            btnConfirmarApuesta = new Guna.UI2.WinForms.Guna2Button();
+            btnPagarTicket = new Guna.UI2.WinForms.Guna2Button();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel8.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -107,37 +107,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1339, 688);
             panel1.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.BackColor = Color.FromArgb(0, 30, 59);
-            tableLayoutPanel3.ColumnCount = 3;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
-            tableLayoutPanel3.Controls.Add(label1, 1, 1);
-            tableLayoutPanel3.Dock = DockStyle.Top;
-            tableLayoutPanel3.ForeColor = Color.DarkOrange;
-            tableLayoutPanel3.Location = new Point(0, 0);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 3;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 29.1428566F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 59.42857F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 10.8193607F));
-            tableLayoutPanel3.Size = new Size(1425, 129);
-            tableLayoutPanel3.TabIndex = 18;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Rubik Mono One", 27.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 153, 46);
-            label1.Location = new Point(402, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(618, 69);
-            label1.TabIndex = 0;
-            label1.Text = "PAGAR TICKET";
             // 
             // tableLayoutPanel2
             // 
@@ -180,9 +149,9 @@
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.4210529F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.8761616F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.7585144F));
-            tableLayoutPanel4.Controls.Add(guna2Button1, 2, 1);
+            tableLayoutPanel4.Controls.Add(btnVerificarTicket, 2, 1);
             tableLayoutPanel4.Controls.Add(label9, 0, 1);
-            tableLayoutPanel4.Controls.Add(guna2TextBox1, 1, 1);
+            tableLayoutPanel4.Controls.Add(txtPagarTicketIdTicket, 1, 1);
             tableLayoutPanel4.Dock = DockStyle.Fill;
             tableLayoutPanel4.Location = new Point(23, 68);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -193,24 +162,24 @@
             tableLayoutPanel4.Size = new Size(1290, 168);
             tableLayoutPanel4.TabIndex = 20;
             // 
-            // guna2Button1
+            // btnVerificarTicket
             // 
-            guna2Button1.Anchor = AnchorStyles.Left;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(230, 89, 25);
-            guna2Button1.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(767, 70);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(170, 40);
-            guna2Button1.TabIndex = 39;
-            guna2Button1.Text = "VERIFICAR";
+            btnVerificarTicket.Anchor = AnchorStyles.Left;
+            btnVerificarTicket.BorderRadius = 10;
+            btnVerificarTicket.CustomizableEdges = customizableEdges1;
+            btnVerificarTicket.DisabledState.BorderColor = Color.DarkGray;
+            btnVerificarTicket.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnVerificarTicket.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnVerificarTicket.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnVerificarTicket.FillColor = Color.FromArgb(230, 89, 25);
+            btnVerificarTicket.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
+            btnVerificarTicket.ForeColor = Color.White;
+            btnVerificarTicket.Location = new Point(767, 70);
+            btnVerificarTicket.Name = "btnVerificarTicket";
+            btnVerificarTicket.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnVerificarTicket.Size = new Size(170, 40);
+            btnVerificarTicket.TabIndex = 39;
+            btnVerificarTicket.Text = "VERIFICAR";
             // 
             // label9
             // 
@@ -218,36 +187,37 @@
             label9.AutoSize = true;
             label9.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(388, 76);
+            label9.Location = new Point(383, 76);
             label9.Name = "label9";
-            label9.Size = new Size(136, 28);
+            label9.Size = new Size(141, 28);
             label9.TabIndex = 37;
-            label9.Text = "ID DE TICKET";
+            label9.Text = "ID DE TICKET:";
             // 
-            // guna2TextBox1
+            // txtPagarTicketIdTicket
             // 
-            guna2TextBox1.BackColor = Color.Transparent;
-            guna2TextBox1.BorderColor = SystemColors.ActiveCaption;
-            guna2TextBox1.BorderRadius = 20;
-            guna2TextBox1.CustomizableEdges = customizableEdges3;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.Dock = DockStyle.Fill;
-            guna2TextBox1.FillColor = Color.FromArgb(0, 30, 59);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(531, 66);
-            guna2TextBox1.Margin = new Padding(4, 5, 4, 5);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox1.Size = new Size(229, 48);
-            guna2TextBox1.TabIndex = 40;
+            txtPagarTicketIdTicket.BackColor = Color.Transparent;
+            txtPagarTicketIdTicket.BorderColor = SystemColors.ActiveCaption;
+            txtPagarTicketIdTicket.BorderRadius = 20;
+            txtPagarTicketIdTicket.CustomizableEdges = customizableEdges3;
+            txtPagarTicketIdTicket.DefaultText = "";
+            txtPagarTicketIdTicket.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPagarTicketIdTicket.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPagarTicketIdTicket.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketIdTicket.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketIdTicket.Dock = DockStyle.Fill;
+            txtPagarTicketIdTicket.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketIdTicket.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketIdTicket.Font = new Font("Inria Sans", 8.999999F);
+            txtPagarTicketIdTicket.ForeColor = Color.White;
+            txtPagarTicketIdTicket.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketIdTicket.Location = new Point(531, 66);
+            txtPagarTicketIdTicket.Margin = new Padding(4, 5, 4, 5);
+            txtPagarTicketIdTicket.Name = "txtPagarTicketIdTicket";
+            txtPagarTicketIdTicket.PlaceholderText = "";
+            txtPagarTicketIdTicket.SelectedText = "";
+            txtPagarTicketIdTicket.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtPagarTicketIdTicket.Size = new Size(229, 48);
+            txtPagarTicketIdTicket.TabIndex = 40;
             // 
             // tableLayoutPanel6
             // 
@@ -276,16 +246,16 @@
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.25F));
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.25F));
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.5F));
-            tableLayoutPanel7.Controls.Add(txtConfirmacionApuestaFecha, 1, 5);
-            tableLayoutPanel7.Controls.Add(txtConfirmacionApuestaGnanciaEstimada, 4, 2);
-            tableLayoutPanel7.Controls.Add(txtConfirmacionApuestaMonto, 3, 2);
+            tableLayoutPanel7.Controls.Add(txtPagarTicketFecha, 1, 5);
+            tableLayoutPanel7.Controls.Add(txtPagarTicketGanancia, 4, 2);
+            tableLayoutPanel7.Controls.Add(txtPagarTicketMonto, 3, 2);
             tableLayoutPanel7.Controls.Add(label4, 1, 1);
             tableLayoutPanel7.Controls.Add(label5, 2, 1);
             tableLayoutPanel7.Controls.Add(label8, 1, 4);
             tableLayoutPanel7.Controls.Add(label6, 3, 1);
             tableLayoutPanel7.Controls.Add(label7, 4, 1);
-            tableLayoutPanel7.Controls.Add(guna2TextBox2, 1, 2);
-            tableLayoutPanel7.Controls.Add(guna2TextBox3, 2, 2);
+            tableLayoutPanel7.Controls.Add(txtPagarTicketEquipo, 1, 2);
+            tableLayoutPanel7.Controls.Add(txtPagarTicketTipoCuota, 2, 2);
             tableLayoutPanel7.Dock = DockStyle.Fill;
             tableLayoutPanel7.Location = new Point(3, 52);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -300,83 +270,86 @@
             tableLayoutPanel7.Size = new Size(1284, 265);
             tableLayoutPanel7.TabIndex = 25;
             // 
-            // txtConfirmacionApuestaFecha
+            // txtPagarTicketFecha
             // 
-            txtConfirmacionApuestaFecha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtConfirmacionApuestaFecha.BackColor = Color.Transparent;
-            txtConfirmacionApuestaFecha.BorderColor = SystemColors.ActiveCaption;
-            txtConfirmacionApuestaFecha.BorderRadius = 20;
-            txtConfirmacionApuestaFecha.CustomizableEdges = customizableEdges5;
-            txtConfirmacionApuestaFecha.DefaultText = "";
-            txtConfirmacionApuestaFecha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtConfirmacionApuestaFecha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtConfirmacionApuestaFecha.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaFecha.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaFecha.FillColor = Color.FromArgb(0, 30, 59);
-            txtConfirmacionApuestaFecha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaFecha.Font = new Font("Segoe UI", 9F);
-            txtConfirmacionApuestaFecha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaFecha.Location = new Point(23, 175);
-            txtConfirmacionApuestaFecha.Margin = new Padding(4, 5, 4, 5);
-            txtConfirmacionApuestaFecha.Name = "txtConfirmacionApuestaFecha";
-            txtConfirmacionApuestaFecha.PlaceholderText = "";
-            txtConfirmacionApuestaFecha.ReadOnly = true;
-            txtConfirmacionApuestaFecha.SelectedText = "";
-            txtConfirmacionApuestaFecha.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtConfirmacionApuestaFecha.Size = new Size(303, 46);
-            txtConfirmacionApuestaFecha.TabIndex = 35;
+            txtPagarTicketFecha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPagarTicketFecha.BackColor = Color.Transparent;
+            txtPagarTicketFecha.BorderColor = SystemColors.ActiveCaption;
+            txtPagarTicketFecha.BorderRadius = 20;
+            txtPagarTicketFecha.CustomizableEdges = customizableEdges5;
+            txtPagarTicketFecha.DefaultText = "";
+            txtPagarTicketFecha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPagarTicketFecha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPagarTicketFecha.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketFecha.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketFecha.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketFecha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketFecha.Font = new Font("Inria Sans", 8.999999F);
+            txtPagarTicketFecha.ForeColor = Color.White;
+            txtPagarTicketFecha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketFecha.Location = new Point(23, 175);
+            txtPagarTicketFecha.Margin = new Padding(4, 5, 4, 5);
+            txtPagarTicketFecha.Name = "txtPagarTicketFecha";
+            txtPagarTicketFecha.PlaceholderText = "";
+            txtPagarTicketFecha.ReadOnly = true;
+            txtPagarTicketFecha.SelectedText = "";
+            txtPagarTicketFecha.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPagarTicketFecha.Size = new Size(303, 54);
+            txtPagarTicketFecha.TabIndex = 35;
             // 
-            // txtConfirmacionApuestaGnanciaEstimada
+            // txtPagarTicketGanancia
             // 
-            txtConfirmacionApuestaGnanciaEstimada.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtConfirmacionApuestaGnanciaEstimada.BackColor = Color.Transparent;
-            txtConfirmacionApuestaGnanciaEstimada.BorderColor = SystemColors.ActiveCaption;
-            txtConfirmacionApuestaGnanciaEstimada.BorderRadius = 20;
-            txtConfirmacionApuestaGnanciaEstimada.CustomizableEdges = customizableEdges7;
-            txtConfirmacionApuestaGnanciaEstimada.DefaultText = "";
-            txtConfirmacionApuestaGnanciaEstimada.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtConfirmacionApuestaGnanciaEstimada.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtConfirmacionApuestaGnanciaEstimada.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaGnanciaEstimada.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaGnanciaEstimada.FillColor = Color.FromArgb(0, 30, 59);
-            txtConfirmacionApuestaGnanciaEstimada.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaGnanciaEstimada.Font = new Font("Segoe UI", 9F);
-            txtConfirmacionApuestaGnanciaEstimada.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaGnanciaEstimada.Location = new Point(956, 50);
-            txtConfirmacionApuestaGnanciaEstimada.Margin = new Padding(4, 5, 4, 5);
-            txtConfirmacionApuestaGnanciaEstimada.Name = "txtConfirmacionApuestaGnanciaEstimada";
-            txtConfirmacionApuestaGnanciaEstimada.PlaceholderText = "";
-            txtConfirmacionApuestaGnanciaEstimada.ReadOnly = true;
-            txtConfirmacionApuestaGnanciaEstimada.SelectedText = "";
-            txtConfirmacionApuestaGnanciaEstimada.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtConfirmacionApuestaGnanciaEstimada.Size = new Size(303, 45);
-            txtConfirmacionApuestaGnanciaEstimada.TabIndex = 34;
+            txtPagarTicketGanancia.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPagarTicketGanancia.BackColor = Color.Transparent;
+            txtPagarTicketGanancia.BorderColor = SystemColors.ActiveCaption;
+            txtPagarTicketGanancia.BorderRadius = 20;
+            txtPagarTicketGanancia.CustomizableEdges = customizableEdges7;
+            txtPagarTicketGanancia.DefaultText = "";
+            txtPagarTicketGanancia.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPagarTicketGanancia.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPagarTicketGanancia.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketGanancia.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketGanancia.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketGanancia.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketGanancia.Font = new Font("Inria Sans", 8.999999F);
+            txtPagarTicketGanancia.ForeColor = Color.White;
+            txtPagarTicketGanancia.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketGanancia.Location = new Point(956, 50);
+            txtPagarTicketGanancia.Margin = new Padding(4, 5, 4, 5);
+            txtPagarTicketGanancia.Name = "txtPagarTicketGanancia";
+            txtPagarTicketGanancia.PlaceholderText = "";
+            txtPagarTicketGanancia.ReadOnly = true;
+            txtPagarTicketGanancia.SelectedText = "";
+            txtPagarTicketGanancia.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtPagarTicketGanancia.Size = new Size(303, 54);
+            txtPagarTicketGanancia.TabIndex = 34;
             // 
-            // txtConfirmacionApuestaMonto
+            // txtPagarTicketMonto
             // 
-            txtConfirmacionApuestaMonto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtConfirmacionApuestaMonto.BackColor = Color.Transparent;
-            txtConfirmacionApuestaMonto.BorderColor = SystemColors.ActiveCaption;
-            txtConfirmacionApuestaMonto.BorderRadius = 20;
-            txtConfirmacionApuestaMonto.CustomizableEdges = customizableEdges9;
-            txtConfirmacionApuestaMonto.DefaultText = "";
-            txtConfirmacionApuestaMonto.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtConfirmacionApuestaMonto.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtConfirmacionApuestaMonto.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaMonto.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaMonto.FillColor = Color.FromArgb(0, 30, 59);
-            txtConfirmacionApuestaMonto.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaMonto.Font = new Font("Segoe UI", 9F);
-            txtConfirmacionApuestaMonto.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaMonto.Location = new Point(645, 50);
-            txtConfirmacionApuestaMonto.Margin = new Padding(4, 5, 4, 5);
-            txtConfirmacionApuestaMonto.Name = "txtConfirmacionApuestaMonto";
-            txtConfirmacionApuestaMonto.PlaceholderText = "";
-            txtConfirmacionApuestaMonto.ReadOnly = true;
-            txtConfirmacionApuestaMonto.SelectedText = "";
-            txtConfirmacionApuestaMonto.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtConfirmacionApuestaMonto.Size = new Size(303, 45);
-            txtConfirmacionApuestaMonto.TabIndex = 33;
+            txtPagarTicketMonto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPagarTicketMonto.BackColor = Color.Transparent;
+            txtPagarTicketMonto.BorderColor = SystemColors.ActiveCaption;
+            txtPagarTicketMonto.BorderRadius = 20;
+            txtPagarTicketMonto.CustomizableEdges = customizableEdges9;
+            txtPagarTicketMonto.DefaultText = "";
+            txtPagarTicketMonto.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPagarTicketMonto.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPagarTicketMonto.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketMonto.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketMonto.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketMonto.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketMonto.Font = new Font("Inria Sans", 8.999999F);
+            txtPagarTicketMonto.ForeColor = Color.White;
+            txtPagarTicketMonto.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketMonto.Location = new Point(645, 50);
+            txtPagarTicketMonto.Margin = new Padding(4, 5, 4, 5);
+            txtPagarTicketMonto.Name = "txtPagarTicketMonto";
+            txtPagarTicketMonto.PlaceholderText = "";
+            txtPagarTicketMonto.ReadOnly = true;
+            txtPagarTicketMonto.SelectedText = "";
+            txtPagarTicketMonto.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtPagarTicketMonto.Size = new Size(303, 54);
+            txtPagarTicketMonto.TabIndex = 33;
             // 
             // label4
             // 
@@ -432,63 +405,65 @@
             label7.AutoSize = true;
             label7.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(999, 17);
+            label7.Location = new Point(996, 17);
             label7.Name = "label7";
-            label7.Size = new Size(217, 28);
+            label7.Size = new Size(222, 28);
             label7.TabIndex = 28;
-            label7.Text = "GANANCIA ESTIMADA";
+            label7.Text = "GANANCIA ESTIMADA:";
             // 
-            // guna2TextBox2
+            // txtPagarTicketEquipo
             // 
-            guna2TextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            guna2TextBox2.BackColor = Color.Transparent;
-            guna2TextBox2.BorderColor = SystemColors.ActiveCaption;
-            guna2TextBox2.BorderRadius = 20;
-            guna2TextBox2.CustomizableEdges = customizableEdges11;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.FromArgb(0, 30, 59);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(23, 50);
-            guna2TextBox2.Margin = new Padding(4, 5, 4, 5);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.ReadOnly = true;
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox2.Size = new Size(303, 46);
-            guna2TextBox2.TabIndex = 37;
+            txtPagarTicketEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPagarTicketEquipo.BackColor = Color.Transparent;
+            txtPagarTicketEquipo.BorderColor = SystemColors.ActiveCaption;
+            txtPagarTicketEquipo.BorderRadius = 20;
+            txtPagarTicketEquipo.CustomizableEdges = customizableEdges11;
+            txtPagarTicketEquipo.DefaultText = "";
+            txtPagarTicketEquipo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPagarTicketEquipo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPagarTicketEquipo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketEquipo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketEquipo.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketEquipo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketEquipo.Font = new Font("Inria Sans", 8.999999F);
+            txtPagarTicketEquipo.ForeColor = Color.White;
+            txtPagarTicketEquipo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketEquipo.Location = new Point(23, 50);
+            txtPagarTicketEquipo.Margin = new Padding(4, 5, 4, 5);
+            txtPagarTicketEquipo.Name = "txtPagarTicketEquipo";
+            txtPagarTicketEquipo.PlaceholderText = "";
+            txtPagarTicketEquipo.ReadOnly = true;
+            txtPagarTicketEquipo.SelectedText = "";
+            txtPagarTicketEquipo.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtPagarTicketEquipo.Size = new Size(303, 54);
+            txtPagarTicketEquipo.TabIndex = 37;
             // 
-            // guna2TextBox3
+            // txtPagarTicketTipoCuota
             // 
-            guna2TextBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            guna2TextBox3.BackColor = Color.Transparent;
-            guna2TextBox3.BorderColor = SystemColors.ActiveCaption;
-            guna2TextBox3.BorderRadius = 20;
-            guna2TextBox3.CustomizableEdges = customizableEdges13;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FillColor = Color.FromArgb(0, 30, 59);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(334, 50);
-            guna2TextBox3.Margin = new Padding(4, 5, 4, 5);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.ReadOnly = true;
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox3.Size = new Size(303, 46);
-            guna2TextBox3.TabIndex = 38;
+            txtPagarTicketTipoCuota.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPagarTicketTipoCuota.BackColor = Color.Transparent;
+            txtPagarTicketTipoCuota.BorderColor = SystemColors.ActiveCaption;
+            txtPagarTicketTipoCuota.BorderRadius = 20;
+            txtPagarTicketTipoCuota.CustomizableEdges = customizableEdges13;
+            txtPagarTicketTipoCuota.DefaultText = "";
+            txtPagarTicketTipoCuota.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPagarTicketTipoCuota.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPagarTicketTipoCuota.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketTipoCuota.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPagarTicketTipoCuota.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketTipoCuota.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketTipoCuota.Font = new Font("Inria Sans", 8.999999F);
+            txtPagarTicketTipoCuota.ForeColor = Color.White;
+            txtPagarTicketTipoCuota.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPagarTicketTipoCuota.Location = new Point(334, 50);
+            txtPagarTicketTipoCuota.Margin = new Padding(4, 5, 4, 5);
+            txtPagarTicketTipoCuota.Name = "txtPagarTicketTipoCuota";
+            txtPagarTicketTipoCuota.PlaceholderText = "";
+            txtPagarTicketTipoCuota.ReadOnly = true;
+            txtPagarTicketTipoCuota.SelectedText = "";
+            txtPagarTicketTipoCuota.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtPagarTicketTipoCuota.Size = new Size(303, 54);
+            txtPagarTicketTipoCuota.TabIndex = 38;
             // 
             // label3
             // 
@@ -508,7 +483,7 @@
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.660965F));
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48.36703F));
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.8942451F));
-            tableLayoutPanel8.Controls.Add(btnConfirmarApuesta, 1, 1);
+            tableLayoutPanel8.Controls.Add(btnPagarTicket, 1, 1);
             tableLayoutPanel8.Dock = DockStyle.Fill;
             tableLayoutPanel8.Location = new Point(3, 323);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -519,24 +494,55 @@
             tableLayoutPanel8.Size = new Size(1284, 103);
             tableLayoutPanel8.TabIndex = 24;
             // 
-            // btnConfirmarApuesta
+            // btnPagarTicket
             // 
-            btnConfirmarApuesta.Anchor = AnchorStyles.None;
-            btnConfirmarApuesta.BorderRadius = 10;
-            btnConfirmarApuesta.CustomizableEdges = customizableEdges15;
-            btnConfirmarApuesta.DisabledState.BorderColor = Color.DarkGray;
-            btnConfirmarApuesta.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnConfirmarApuesta.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnConfirmarApuesta.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnConfirmarApuesta.FillColor = Color.FromArgb(230, 89, 25);
-            btnConfirmarApuesta.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            btnConfirmarApuesta.ForeColor = Color.White;
-            btnConfirmarApuesta.Location = new Point(515, 21);
-            btnConfirmarApuesta.Name = "btnConfirmarApuesta";
-            btnConfirmarApuesta.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnConfirmarApuesta.Size = new Size(248, 59);
-            btnConfirmarApuesta.TabIndex = 2;
-            btnConfirmarApuesta.Text = "CONFIRMAR APUESTA";
+            btnPagarTicket.Anchor = AnchorStyles.None;
+            btnPagarTicket.BorderRadius = 10;
+            btnPagarTicket.CustomizableEdges = customizableEdges15;
+            btnPagarTicket.DisabledState.BorderColor = Color.DarkGray;
+            btnPagarTicket.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPagarTicket.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPagarTicket.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPagarTicket.FillColor = Color.FromArgb(230, 89, 25);
+            btnPagarTicket.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
+            btnPagarTicket.ForeColor = Color.White;
+            btnPagarTicket.Location = new Point(536, 21);
+            btnPagarTicket.Name = "btnPagarTicket";
+            btnPagarTicket.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnPagarTicket.Size = new Size(207, 59);
+            btnPagarTicket.TabIndex = 2;
+            btnPagarTicket.Text = "PAGAR TICKET";
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.BackColor = Color.FromArgb(0, 30, 59);
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
+            tableLayoutPanel3.Controls.Add(label1, 1, 1);
+            tableLayoutPanel3.Dock = DockStyle.Top;
+            tableLayoutPanel3.ForeColor = Color.DarkOrange;
+            tableLayoutPanel3.Location = new Point(0, 0);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 3;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 29.1428566F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 59.42857F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 10.8193607F));
+            tableLayoutPanel3.Size = new Size(1425, 129);
+            tableLayoutPanel3.TabIndex = 18;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new Font("Rubik Mono One", 27.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(255, 153, 46);
+            label1.Location = new Point(402, 41);
+            label1.Name = "label1";
+            label1.Size = new Size(618, 69);
+            label1.TabIndex = 0;
+            label1.Text = "PAGAR TICKET";
             // 
             // FrmPagarTicket
             // 
@@ -549,8 +555,6 @@
             Text = "FrmPagarTicket";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel4.ResumeLayout(false);
@@ -560,6 +564,8 @@
             tableLayoutPanel7.ResumeLayout(false);
             tableLayoutPanel7.PerformLayout();
             tableLayoutPanel8.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -572,23 +578,23 @@
         private TableLayoutPanel tableLayoutPanel2;
         private Label label2;
         private TableLayoutPanel tableLayoutPanel4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnVerificarTicket;
         private Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPagarTicketIdTicket;
         private TableLayoutPanel tableLayoutPanel6;
         private TableLayoutPanel tableLayoutPanel7;
-        private Guna.UI2.WinForms.Guna2TextBox txtConfirmacionApuestaFecha;
-        private Guna.UI2.WinForms.Guna2TextBox txtConfirmacionApuestaGnanciaEstimada;
-        private Guna.UI2.WinForms.Guna2TextBox txtConfirmacionApuestaMonto;
+        private Guna.UI2.WinForms.Guna2TextBox txtPagarTicketFecha;
+        private Guna.UI2.WinForms.Guna2TextBox txtPagarTicketGanancia;
+        private Guna.UI2.WinForms.Guna2TextBox txtPagarTicketMonto;
         private Label label4;
         private Label label5;
         private Label label8;
         private Label label6;
         private Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtPagarTicketEquipo;
+        private Guna.UI2.WinForms.Guna2TextBox txtPagarTicketTipoCuota;
         private Label label3;
         private TableLayoutPanel tableLayoutPanel8;
-        private Guna.UI2.WinForms.Guna2Button btnConfirmarApuesta;
+        private Guna.UI2.WinForms.Guna2Button btnPagarTicket;
     }
 }

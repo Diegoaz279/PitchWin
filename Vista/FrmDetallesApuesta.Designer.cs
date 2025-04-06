@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel3 = new TableLayoutPanel();
             label1 = new Label();
             panel1 = new Panel();
@@ -212,7 +212,7 @@
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.ChatGPT_Image_1_abr_2025__10_41_29_a_m_;
+            pictureBox1.Image = Properties.Resources.VS;
             pictureBox1.Location = new Point(3, 41);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 27);
@@ -300,7 +300,7 @@
             txtConfirmacionApuestaFecha.Anchor = AnchorStyles.Top;
             txtConfirmacionApuestaFecha.BorderColor = SystemColors.ActiveCaption;
             txtConfirmacionApuestaFecha.BorderRadius = 5;
-            txtConfirmacionApuestaFecha.CustomizableEdges = customizableEdges15;
+            txtConfirmacionApuestaFecha.CustomizableEdges = customizableEdges1;
             txtConfirmacionApuestaFecha.DefaultText = "";
             txtConfirmacionApuestaFecha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConfirmacionApuestaFecha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -308,15 +308,16 @@
             txtConfirmacionApuestaFecha.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmacionApuestaFecha.FillColor = Color.FromArgb(0, 30, 59);
             txtConfirmacionApuestaFecha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaFecha.Font = new Font("Segoe UI", 9F);
+            txtConfirmacionApuestaFecha.Font = new Font("Inria Sans", 8.999999F);
+            txtConfirmacionApuestaFecha.ForeColor = Color.White;
             txtConfirmacionApuestaFecha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmacionApuestaFecha.Location = new Point(21, 150);
             txtConfirmacionApuestaFecha.Margin = new Padding(4, 5, 4, 5);
             txtConfirmacionApuestaFecha.Name = "txtConfirmacionApuestaFecha";
             txtConfirmacionApuestaFecha.PlaceholderText = "";
             txtConfirmacionApuestaFecha.SelectedText = "";
-            txtConfirmacionApuestaFecha.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtConfirmacionApuestaFecha.Size = new Size(277, 33);
+            txtConfirmacionApuestaFecha.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtConfirmacionApuestaFecha.Size = new Size(277, 30);
             txtConfirmacionApuestaFecha.TabIndex = 35;
             // 
             // txtConfirmacionApuestaGnanciaEstimada
@@ -324,7 +325,7 @@
             txtConfirmacionApuestaGnanciaEstimada.Anchor = AnchorStyles.Top;
             txtConfirmacionApuestaGnanciaEstimada.BorderColor = SystemColors.ActiveCaption;
             txtConfirmacionApuestaGnanciaEstimada.BorderRadius = 5;
-            txtConfirmacionApuestaGnanciaEstimada.CustomizableEdges = customizableEdges17;
+            txtConfirmacionApuestaGnanciaEstimada.CustomizableEdges = customizableEdges3;
             txtConfirmacionApuestaGnanciaEstimada.DefaultText = "";
             txtConfirmacionApuestaGnanciaEstimada.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConfirmacionApuestaGnanciaEstimada.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -332,15 +333,16 @@
             txtConfirmacionApuestaGnanciaEstimada.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmacionApuestaGnanciaEstimada.FillColor = Color.FromArgb(0, 30, 59);
             txtConfirmacionApuestaGnanciaEstimada.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaGnanciaEstimada.Font = new Font("Segoe UI", 9F);
+            txtConfirmacionApuestaGnanciaEstimada.Font = new Font("Inria Sans", 8.999999F);
+            txtConfirmacionApuestaGnanciaEstimada.ForeColor = Color.White;
             txtConfirmacionApuestaGnanciaEstimada.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmacionApuestaGnanciaEstimada.Location = new Point(876, 44);
             txtConfirmacionApuestaGnanciaEstimada.Margin = new Padding(4, 5, 4, 5);
             txtConfirmacionApuestaGnanciaEstimada.Name = "txtConfirmacionApuestaGnanciaEstimada";
             txtConfirmacionApuestaGnanciaEstimada.PlaceholderText = "";
             txtConfirmacionApuestaGnanciaEstimada.SelectedText = "";
-            txtConfirmacionApuestaGnanciaEstimada.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtConfirmacionApuestaGnanciaEstimada.Size = new Size(277, 34);
+            txtConfirmacionApuestaGnanciaEstimada.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtConfirmacionApuestaGnanciaEstimada.Size = new Size(277, 31);
             txtConfirmacionApuestaGnanciaEstimada.TabIndex = 34;
             // 
             // txtConfirmacionApuestaMonto
@@ -348,7 +350,7 @@
             txtConfirmacionApuestaMonto.Anchor = AnchorStyles.Top;
             txtConfirmacionApuestaMonto.BorderColor = SystemColors.ActiveCaption;
             txtConfirmacionApuestaMonto.BorderRadius = 5;
-            txtConfirmacionApuestaMonto.CustomizableEdges = customizableEdges19;
+            txtConfirmacionApuestaMonto.CustomizableEdges = customizableEdges5;
             txtConfirmacionApuestaMonto.DefaultText = "";
             txtConfirmacionApuestaMonto.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConfirmacionApuestaMonto.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -356,15 +358,16 @@
             txtConfirmacionApuestaMonto.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmacionApuestaMonto.FillColor = Color.FromArgb(0, 30, 59);
             txtConfirmacionApuestaMonto.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmacionApuestaMonto.Font = new Font("Segoe UI", 9F);
+            txtConfirmacionApuestaMonto.Font = new Font("Inria Sans", 8.999999F);
+            txtConfirmacionApuestaMonto.ForeColor = Color.White;
             txtConfirmacionApuestaMonto.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmacionApuestaMonto.Location = new Point(591, 44);
             txtConfirmacionApuestaMonto.Margin = new Padding(4, 5, 4, 5);
             txtConfirmacionApuestaMonto.Name = "txtConfirmacionApuestaMonto";
             txtConfirmacionApuestaMonto.PlaceholderText = "";
             txtConfirmacionApuestaMonto.SelectedText = "";
-            txtConfirmacionApuestaMonto.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtConfirmacionApuestaMonto.Size = new Size(277, 34);
+            txtConfirmacionApuestaMonto.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtConfirmacionApuestaMonto.Size = new Size(277, 31);
             txtConfirmacionApuestaMonto.TabIndex = 33;
             // 
             // label4
@@ -397,18 +400,18 @@
             cmbConfirmacionDeApuestaEquipo.BackColor = Color.Transparent;
             cmbConfirmacionDeApuestaEquipo.BorderColor = SystemColors.ActiveCaption;
             cmbConfirmacionDeApuestaEquipo.BorderRadius = 5;
-            cmbConfirmacionDeApuestaEquipo.CustomizableEdges = customizableEdges21;
+            cmbConfirmacionDeApuestaEquipo.CustomizableEdges = customizableEdges7;
             cmbConfirmacionDeApuestaEquipo.DrawMode = DrawMode.OwnerDrawFixed;
             cmbConfirmacionDeApuestaEquipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbConfirmacionDeApuestaEquipo.FillColor = Color.FromArgb(0, 30, 59);
             cmbConfirmacionDeApuestaEquipo.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbConfirmacionDeApuestaEquipo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             cmbConfirmacionDeApuestaEquipo.Font = new Font("Segoe UI", 10F);
-            cmbConfirmacionDeApuestaEquipo.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbConfirmacionDeApuestaEquipo.ForeColor = Color.White;
             cmbConfirmacionDeApuestaEquipo.ItemHeight = 30;
             cmbConfirmacionDeApuestaEquipo.Location = new Point(20, 42);
             cmbConfirmacionDeApuestaEquipo.Name = "cmbConfirmacionDeApuestaEquipo";
-            cmbConfirmacionDeApuestaEquipo.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            cmbConfirmacionDeApuestaEquipo.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbConfirmacionDeApuestaEquipo.Size = new Size(279, 36);
             cmbConfirmacionDeApuestaEquipo.TabIndex = 5;
             // 
@@ -454,18 +457,18 @@
             cmbConfirmacionDeApuestaTipoApuesta.BackColor = Color.Transparent;
             cmbConfirmacionDeApuestaTipoApuesta.BorderColor = SystemColors.ActiveCaption;
             cmbConfirmacionDeApuestaTipoApuesta.BorderRadius = 5;
-            cmbConfirmacionDeApuestaTipoApuesta.CustomizableEdges = customizableEdges23;
+            cmbConfirmacionDeApuestaTipoApuesta.CustomizableEdges = customizableEdges9;
             cmbConfirmacionDeApuestaTipoApuesta.DrawMode = DrawMode.OwnerDrawFixed;
             cmbConfirmacionDeApuestaTipoApuesta.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbConfirmacionDeApuestaTipoApuesta.FillColor = Color.FromArgb(0, 30, 59);
             cmbConfirmacionDeApuestaTipoApuesta.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbConfirmacionDeApuestaTipoApuesta.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cmbConfirmacionDeApuestaTipoApuesta.Font = new Font("Segoe UI", 10F);
-            cmbConfirmacionDeApuestaTipoApuesta.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbConfirmacionDeApuestaTipoApuesta.Font = new Font("Inria Sans", 8.999999F);
+            cmbConfirmacionDeApuestaTipoApuesta.ForeColor = Color.White;
             cmbConfirmacionDeApuestaTipoApuesta.ItemHeight = 30;
             cmbConfirmacionDeApuestaTipoApuesta.Location = new Point(305, 42);
             cmbConfirmacionDeApuestaTipoApuesta.Name = "cmbConfirmacionDeApuestaTipoApuesta";
-            cmbConfirmacionDeApuestaTipoApuesta.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            cmbConfirmacionDeApuestaTipoApuesta.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cmbConfirmacionDeApuestaTipoApuesta.Size = new Size(279, 36);
             cmbConfirmacionDeApuestaTipoApuesta.TabIndex = 36;
             // 
@@ -505,7 +508,7 @@
             // 
             btnConfirmarApuesta.Anchor = AnchorStyles.None;
             btnConfirmarApuesta.BorderRadius = 10;
-            btnConfirmarApuesta.CustomizableEdges = customizableEdges25;
+            btnConfirmarApuesta.CustomizableEdges = customizableEdges11;
             btnConfirmarApuesta.DisabledState.BorderColor = Color.DarkGray;
             btnConfirmarApuesta.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConfirmarApuesta.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -515,7 +518,7 @@
             btnConfirmarApuesta.ForeColor = Color.White;
             btnConfirmarApuesta.Location = new Point(612, 18);
             btnConfirmarApuesta.Name = "btnConfirmarApuesta";
-            btnConfirmarApuesta.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnConfirmarApuesta.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnConfirmarApuesta.Size = new Size(248, 50);
             btnConfirmarApuesta.TabIndex = 1;
             btnConfirmarApuesta.Text = "CONFIRMAR APUESTA";
@@ -524,7 +527,7 @@
             // 
             btnAtrasDetalleApuesta.Anchor = AnchorStyles.None;
             btnAtrasDetalleApuesta.BorderRadius = 10;
-            btnAtrasDetalleApuesta.CustomizableEdges = customizableEdges27;
+            btnAtrasDetalleApuesta.CustomizableEdges = customizableEdges13;
             btnAtrasDetalleApuesta.DisabledState.BorderColor = Color.DarkGray;
             btnAtrasDetalleApuesta.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAtrasDetalleApuesta.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -532,10 +535,10 @@
             btnAtrasDetalleApuesta.FillColor = Color.FromArgb(230, 89, 25);
             btnAtrasDetalleApuesta.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
             btnAtrasDetalleApuesta.ForeColor = Color.White;
-            btnAtrasDetalleApuesta.Location = new Point(378, 21);
+            btnAtrasDetalleApuesta.Location = new Point(378, 19);
             btnAtrasDetalleApuesta.Name = "btnAtrasDetalleApuesta";
-            btnAtrasDetalleApuesta.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            btnAtrasDetalleApuesta.Size = new Size(120, 43);
+            btnAtrasDetalleApuesta.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnAtrasDetalleApuesta.Size = new Size(120, 47);
             btnAtrasDetalleApuesta.TabIndex = 2;
             btnAtrasDetalleApuesta.Text = "ATRAS";
             // 

@@ -131,7 +131,7 @@
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.ChatGPT_Image_1_abr_2025__10_41_29_a_m_;
+            pictureBox1.Image = Properties.Resources.VS;
             pictureBox1.Location = new Point(3, 103);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(45, 80);
@@ -143,22 +143,22 @@
             // 
             lblInicio1.Anchor = AnchorStyles.None;
             lblInicio1.AutoSize = true;
-            lblInicio1.Font = new Font("Inria Sans", 14F, FontStyle.Bold);
+            lblInicio1.Font = new Font("Inria Sans", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInicio1.ForeColor = Color.White;
-            lblInicio1.Location = new Point(384, 354);
+            lblInicio1.Location = new Point(384, 352);
             lblInicio1.Name = "lblInicio1";
-            lblInicio1.Size = new Size(0, 35);
+            lblInicio1.Size = new Size(0, 40);
             lblInicio1.TabIndex = 5;
             // 
             // lblInicio2
             // 
             lblInicio2.Anchor = AnchorStyles.None;
             lblInicio2.AutoSize = true;
-            lblInicio2.Font = new Font("Inria Sans", 14F, FontStyle.Bold);
+            lblInicio2.Font = new Font("Inria Sans", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInicio2.ForeColor = Color.White;
-            lblInicio2.Location = new Point(754, 354);
+            lblInicio2.Location = new Point(754, 352);
             lblInicio2.Name = "lblInicio2";
-            lblInicio2.Size = new Size(0, 35);
+            lblInicio2.Size = new Size(0, 40);
             lblInicio2.TabIndex = 6;
             // 
             // panel2
