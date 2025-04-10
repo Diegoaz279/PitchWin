@@ -67,6 +67,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel1.ColumnCount = 5;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 27.5F));
@@ -172,6 +173,7 @@
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel3.ColumnCount = 3;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
@@ -193,7 +195,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Rubik Mono One", 31.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 153, 46);
+            label1.ForeColor = Color.FromArgb(252, 206, 66);
             label1.Location = new Point(112, 47);
             label1.Name = "label1";
             label1.Size = new Size(914, 80);
@@ -202,7 +204,7 @@
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.BackColor = Color.FromArgb(0, 31, 58);
+            tableLayoutPanel2.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 42F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16F));
@@ -220,6 +222,7 @@
             // 
             // btnApostarInicio
             // 
+            btnApostarInicio.BackColor = Color.Transparent;
             btnApostarInicio.BorderRadius = 10;
             btnApostarInicio.CustomizableEdges = customizableEdges1;
             btnApostarInicio.DisabledState.BorderColor = Color.DarkGray;
@@ -227,15 +230,16 @@
             btnApostarInicio.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnApostarInicio.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnApostarInicio.Dock = DockStyle.Fill;
-            btnApostarInicio.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostarInicio.FillColor = Color.FromArgb(252, 206, 66);
             btnApostarInicio.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            btnApostarInicio.ForeColor = Color.White;
+            btnApostarInicio.ForeColor = SystemColors.WindowText;
             btnApostarInicio.Location = new Point(482, 20);
             btnApostarInicio.Name = "btnApostarInicio";
             btnApostarInicio.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnApostarInicio.Size = new Size(176, 57);
             btnApostarInicio.TabIndex = 2;
             btnApostarInicio.Text = "APOSTAR";
+            btnApostarInicio.Click += btnApostarInicio_Click;
             // 
             // FrmInicioo
             // 

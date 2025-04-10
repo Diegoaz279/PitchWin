@@ -1,4 +1,5 @@
-﻿using PitchWin.Vista;
+﻿using PitchWin.Presentador;
+using PitchWin.Vista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,92 +14,67 @@ namespace PlayerUI
 {
     public partial class FrmMenuPrincipal : Form
     {
+        // Instancia del presentador del menú principal
+        public MenuPrincipalPresentador menu;
+
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-            // Crea una instancia del formulario FrmApuestas
-            FrmInicioo frmInicio = new FrmInicioo();
 
-            // Establecer el formulario como hijo del panel PanelInicio
-            frmInicio.TopLevel = false;  // Evita que se abra en una nueva ventana
-            frmInicio.FormBorderStyle = FormBorderStyle.None; // Opcional: quita los bordes del formulario
-            frmInicio.Dock = DockStyle.Fill;  // Asegura que el formulario ocupe todo el panel
-            PanelInicio.Controls.Clear(); // Limpia cualquier control que esté previamente en el panel
-            PanelInicio.Controls.Add(frmInicio);  // Añade el formulario al panel
-            frmInicio.Show(); // Muestra el formulario dentro del panel
+        }
 
+        // Este método se utiliza para cargar un formulario hijo en el panel contenedor (PanelInicio)
+        // En FrmMenuPrincipal, método para abrir un formulario hijo en el panel contenedor.
+        public void AbrirFormularioHijo(Form formHijo)
+        {
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            PanelInicio.Controls.Clear();
+            PanelInicio.Controls.Add(formHijo);
+            PanelInicio.Tag = formHijo;
+            // No asignamos Owner aquí porque el formulario queda incrustado.
+            formHijo.Show();
+        }
 
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            // Inicializar el presentador cuando el formulario se carga
+            menu = new MenuPrincipalPresentador(this);
+
+            // Llamar al método para cargar automáticamente el formulario de inicio
+            menu.CargarFrmInicioo();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            menu.CerrarSesion(this);
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            FrmInicioo frmInicio = new FrmInicioo();
-
-            // Establecer el formulario como hijo del panel PanelInicio
-            frmInicio.TopLevel = false;  // Evita que se abra en una nueva ventana
-            frmInicio.FormBorderStyle = FormBorderStyle.None; // Opcional: quita los bordes del formulario
-            frmInicio.Dock = DockStyle.Fill;  // Asegura que el formulario ocupe todo el panel
-            PanelInicio.Controls.Clear(); // Limpia cualquier control que esté previamente en el panel
-            PanelInicio.Controls.Add(frmInicio);  // Añade el formulario al panel
-            frmInicio.Show(); // Muestra el formulario dentro del panel
-
+            menu.CargarFrmInicioo();
         }
 
         private void btnApuestas_Click(object sender, EventArgs e)
         {
-            FrmApuestas frmapuestas = new FrmApuestas();
-
-            // Establecer el formulario como hijo del panel PanelInicio
-            frmapuestas.TopLevel = false;  // Evita que se abra en una nueva ventana
-            frmapuestas.FormBorderStyle = FormBorderStyle.None; // Opcional: quita los bordes del formulario
-            frmapuestas.Dock = DockStyle.Fill;  // Asegura que el formulario ocupe todo el panel
-            PanelInicio.Controls.Clear(); // Limpia cualquier control que esté previamente en el panel
-            PanelInicio.Controls.Add(frmapuestas);  // Añade el formulario al panel
-            frmapuestas.Show(); // Muestra el formulario dentro del panel
+            FrmApuestas frmApuestas = new FrmApuestas();
+            frmApuestas.Owner = this; // Asigna FrmMenuPrincipal como Owner
+            AbrirFormularioHijo(frmApuestas);
         }
 
         private void btnPagarTicket_Click(object sender, EventArgs e)
         {
-            FrmPagarTicket frmapuestas = new FrmPagarTicket();
-
-            // Establecer el formulario como hijo del panel PanelInicio
-            frmapuestas.TopLevel = false;  // Evita que se abra en una nueva ventana
-            frmapuestas.FormBorderStyle = FormBorderStyle.None; // Opcional: quita los bordes del formulario
-            frmapuestas.Dock = DockStyle.Fill;  // Asegura que el formulario ocupe todo el panel
-            PanelInicio.Controls.Clear(); // Limpia cualquier control que esté previamente en el panel
-            PanelInicio.Controls.Add(frmapuestas);  // Añade el formulario al panel
-            frmapuestas.Show(); // Muestra el formulario dentro del panel
+            menu.CargarFrmPagarTicket();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            FrmReportes frmapuestas = new FrmReportes();
-
-            // Establecer el formulario como hijo del panel PanelInicio
-            frmapuestas.TopLevel = false;  // Evita que se abra en una nueva ventana
-            frmapuestas.FormBorderStyle = FormBorderStyle.None; // Opcional: quita los bordes del formulario
-            frmapuestas.Dock = DockStyle.Fill;  // Asegura que el formulario ocupe todo el panel
-            PanelInicio.Controls.Clear(); // Limpia cualquier control que esté previamente en el panel
-            PanelInicio.Controls.Add(frmapuestas);  // Añade el formulario al panel
-            frmapuestas.Show(); // Muestra el formulario dentro del panel
+            menu.CargarFrmReportes();
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            FrmAyuda frmapuestas = new FrmAyuda();
-
-            // Establecer el formulario como hijo del panel PanelInicio
-            frmapuestas.TopLevel = false;  // Evita que se abra en una nueva ventana
-            frmapuestas.FormBorderStyle = FormBorderStyle.None; // Opcional: quita los bordes del formulario
-            frmapuestas.Dock = DockStyle.Fill;  // Asegura que el formulario ocupe todo el panel
-            PanelInicio.Controls.Clear(); // Limpia cualquier control que esté previamente en el panel
-            PanelInicio.Controls.Add(frmapuestas);  // Añade el formulario al panel
-            frmapuestas.Show(); // Muestra el formulario dentro del panel
+            menu.CargarFrmAyuda();
         }
-    }
-}
+    }   }

@@ -38,7 +38,7 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = Color.FromArgb(0, 30, 59);
+            tableLayoutPanel1.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 90F));

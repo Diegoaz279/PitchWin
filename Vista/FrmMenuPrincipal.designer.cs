@@ -49,7 +49,7 @@
             // panelSideMenu
             // 
             panelSideMenu.AutoScroll = true;
-            panelSideMenu.BackColor = Color.FromArgb(1, 41, 72);
+            panelSideMenu.BackColor = Color.FromArgb(20, 20, 19);
             panelSideMenu.Controls.Add(btnAyuda);
             panelSideMenu.Controls.Add(btnReportes);
             panelSideMenu.Controls.Add(btnPagarTicket);
@@ -71,8 +71,8 @@
             btnAyuda.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
             btnAyuda.FlatStyle = FlatStyle.Flat;
             btnAyuda.Font = new Font("Inria Sans", 14F);
-            btnAyuda.ForeColor = Color.Silver;
-            btnAyuda.Image = (Image)resources.GetObject("btnAyuda.Image");
+            btnAyuda.ForeColor = Color.FromArgb(252, 206, 66);
+            btnAyuda.Image = PitchWin.Properties.Resources.BTNAYUDA;
             btnAyuda.ImageAlign = ContentAlignment.MiddleLeft;
             btnAyuda.Location = new Point(0, 509);
             btnAyuda.Name = "btnAyuda";
@@ -93,8 +93,8 @@
             btnReportes.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Inria Sans", 14F);
-            btnReportes.ForeColor = Color.Silver;
-            btnReportes.Image = (Image)resources.GetObject("btnReportes.Image");
+            btnReportes.ForeColor = Color.FromArgb(252, 206, 66);
+            btnReportes.Image = PitchWin.Properties.Resources.BTNREPORTE;
             btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
             btnReportes.Location = new Point(0, 418);
             btnReportes.Name = "btnReportes";
@@ -115,8 +115,8 @@
             btnPagarTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
             btnPagarTicket.FlatStyle = FlatStyle.Flat;
             btnPagarTicket.Font = new Font("Inria Sans", 14F);
-            btnPagarTicket.ForeColor = Color.Silver;
-            btnPagarTicket.Image = (Image)resources.GetObject("btnPagarTicket.Image");
+            btnPagarTicket.ForeColor = Color.FromArgb(252, 206, 66);
+            btnPagarTicket.Image = PitchWin.Properties.Resources.BTNTICKET;
             btnPagarTicket.ImageAlign = ContentAlignment.MiddleLeft;
             btnPagarTicket.Location = new Point(0, 327);
             btnPagarTicket.Name = "btnPagarTicket";
@@ -137,8 +137,8 @@
             btnApuestas.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
             btnApuestas.FlatStyle = FlatStyle.Flat;
             btnApuestas.Font = new Font("Inria Sans", 14F);
-            btnApuestas.ForeColor = Color.Silver;
-            btnApuestas.Image = (Image)resources.GetObject("btnApuestas.Image");
+            btnApuestas.ForeColor = Color.FromArgb(252, 206, 66);
+            btnApuestas.Image = PitchWin.Properties.Resources.ChatGPT_Image_10_abr_2025__02_33_05_a_m_;
             btnApuestas.ImageAlign = ContentAlignment.MiddleLeft;
             btnApuestas.Location = new Point(0, 236);
             btnApuestas.Name = "btnApuestas";
@@ -159,7 +159,7 @@
             btnInicio.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Inria Sans", 14F);
-            btnInicio.ForeColor = Color.Silver;
+            btnInicio.ForeColor = Color.FromArgb(252, 206, 66);
             btnInicio.Image = (Image)resources.GetObject("btnInicio.Image");
             btnInicio.ImageAlign = ContentAlignment.MiddleLeft;
             btnInicio.Location = new Point(0, 145);
@@ -181,7 +181,7 @@
             btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Inria Sans", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExit.ForeColor = Color.FromArgb(226, 98, 34);
+            btnExit.ForeColor = Color.FromArgb(252, 206, 66);
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageAlign = ContentAlignment.MiddleLeft;
             btnExit.Location = new Point(0, 752);
@@ -208,11 +208,11 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
-            pictureBox1.Image = PitchWin.Properties.Resources.ChatGPT_Image_31_mar_2025__02_14_43_p_m_;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(51, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 136);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -223,16 +223,16 @@
             panelFormInicio.Dock = DockStyle.Fill;
             panelFormInicio.Location = new Point(401, 0);
             panelFormInicio.Name = "panelFormInicio";
-            panelFormInicio.Size = new Size(1208, 843);
+            panelFormInicio.Size = new Size(1288, 843);
             panelFormInicio.TabIndex = 2;
             // 
             // PanelInicio
             // 
-            PanelInicio.BackColor = Color.FromArgb(0, 30, 59);
+            PanelInicio.BackColor = Color.FromArgb(12, 12, 12);
             PanelInicio.Dock = DockStyle.Fill;
             PanelInicio.Location = new Point(0, 0);
             PanelInicio.Name = "PanelInicio";
-            PanelInicio.Size = new Size(1208, 843);
+            PanelInicio.Size = new Size(1288, 843);
             PanelInicio.TabIndex = 15;
             // 
             // FrmMenuPrincipal
@@ -240,7 +240,7 @@
             AutoScaleDimensions = new SizeF(12F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1609, 843);
+            ClientSize = new Size(1689, 843);
             Controls.Add(panelFormInicio);
             Controls.Add(panelSideMenu);
             Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -249,6 +249,7 @@
             MinimumSize = new Size(950, 600);
             Name = "FrmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
+            Load += FrmMenuPrincipal_Load;
             panelSideMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -263,12 +264,12 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelFormInicio;
         private PictureBox pictureBox1;
-        private Panel PanelInicio;
         private Button btnAyuda;
         private Button btnReportes;
         private Button btnPagarTicket;
         private Button btnApuestas;
         private Button btnInicio;
+        public Panel PanelInicio;
     }
 }
 

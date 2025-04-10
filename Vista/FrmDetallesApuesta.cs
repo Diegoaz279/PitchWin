@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PitchWin.Modelo;
+using PitchWin.Presentador;
+using PlayerUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,194 +13,190 @@ using System.Windows.Forms;
 
 namespace PitchWin.Vista
 {
-    public partial class FrmDetallesApuesta : Form
+    public partial class FrmDetallesApuesta : Form, IDetalleApuestaView
     {
-        // Cuotas de ejemplo para cada tipo de apuesta
-        private decimal cuotaEquipoLocal = 1.8m;
-        private decimal cuotaEquipoVisitante = 2.0m;
-        private decimal cuotaEmpate = 3.0m;
-        public FrmDetallesApuesta()
+        private readonly DetalleApuestaPresentador _presentador;
+
+        public FrmDetallesApuesta(Partido partido, PitchWinDbContext dbContext)
         {
             InitializeComponent();
-            // Llamamos al método para cargar los detalles de la apuesta
-            CargarEquipos();
-            
-        }
-        // Método para cargar los equipos disponibles para apostar en los ComboBox
-        private void CargarEquipos()
-        {
-            try
-            {
-                // Aquí deberías tener la lógica para obtener dinámicamente los equipos disponibles de la API o de la base de datos
-                // Para este ejemplo, vamos a usar nombres estáticos de equipos
-                cmbConfirmacionDeApuestaEquipo.Items.Clear();
-                cmbConfirmacionDeApuestaEquipo.Items.Add("New York Yankees");
-                cmbConfirmacionDeApuestaEquipo.Items.Add("Boston Red Sox");
-                cmbConfirmacionDeApuestaEquipo.Items.Add("Chicago Cubs");
-                cmbConfirmacionDeApuestaEquipo.Items.Add("Los Angeles Dodgers");
 
-                // Si ya hay un equipo seleccionado, cargamos los tipos de apuesta correspondientes
-                if (cmbConfirmacionDeApuestaEquipo.SelectedItem != null)
-                {
-                    CargarTiposDeApuesta();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los equipos: " + ex.Message);
-            }
-        }
-        // Método para cargar los tipos de apuesta según el equipo seleccionado
-        private void CargarTiposDeApuesta()
-        {
-            try
-            {
-                cmbConfirmacionDeApuestaTipoApuesta.Items.Clear();
-                string equipoSeleccionado = cmbConfirmacionDeApuestaEquipo.SelectedItem.ToString();
+            // Rellenar los datos del partido en los controles.
+            EquipoLocal = partido.EquipoLocal;
+            EquipoVisitante = partido.EquipoVisitante;
+            HoraPartido = partido.HoraPartido.ToString("hh:mm tt");
 
-                // Lógica para cargar los tipos de apuesta basados en el equipo seleccionado
-                if (equipoSeleccionado == "New York Yankees" || equipoSeleccionado == "Boston Red Sox")
-                {
-                    cmbConfirmacionDeApuestaTipoApuesta.Items.Add("Equipo Local");
-                    cmbConfirmacionDeApuestaTipoApuesta.Items.Add("Equipo Visitante");
-                    cmbConfirmacionDeApuestaTipoApuesta.Items.Add("Empate");
-                }
-                else
-                {
-                    cmbConfirmacionDeApuestaTipoApuesta.Items.Add("Equipo Local");
-                    cmbConfirmacionDeApuestaTipoApuesta.Items.Add("Equipo Visitante");
-                }
+            // Cargar la fecha del juego en el TextBox correspondiente.
+            txtConfirmacionApuestaFecha.Text = partido.HoraPartido.ToShortDateString();
 
-                cmbConfirmacionDeApuestaTipoApuesta.SelectedIndex = 0; // Seleccionamos el primer tipo de apuesta por defecto
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los tipos de apuesta: " + ex.Message);
-            }
+            // Inicializar controles para seleccionar el tipo de apuesta y el equipo apostado.
+            cmbConfirmacionDeApuestaTipoApuesta.Items.AddRange(new string[] { "Local", "Visitante", "Empate" });
+            cmbConfirmacionDeApuestaTipoApuesta.SelectedIndex = 0;
+            cmbConfirmacionDeApuestaEquipo.Items.Add(EquipoLocal);
+            cmbConfirmacionDeApuestaEquipo.Items.Add(EquipoVisitante);
+            cmbConfirmacionDeApuestaEquipo.SelectedIndex = 0;
+
+            // Suscribir el evento TextChanged para recalcular la ganancia en tiempo real.
+            txtConfirmacionApuestaMonto.TextChanged += txtConfirmacionApuestaMonto_TextChanged;
+
+            // Inicializar el presentador.
+            _presentador = new DetalleApuestaPresentador(this, partido, new TicketService(dbContext));
+
+            // Cuando el formulario se muestre, cargamos los logos.
+            this.Shown += async (s, e) => { await _presentador.CargarLogosAsync(); };
         }
+
         private void txtConfirmacionApuestaMonto_TextChanged(object sender, EventArgs e)
         {
-            CalcularGananciaEstimada();
+            _presentador.CalcularGanancia();
         }
 
-        private void cmbConfirmacionDeApuestaTipoApuesta_SelectedIndexChanged(object sender, EventArgs e)
+        #region Implementación de IDetalleApuestaView
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Browsable(false)]
+        public string EquipoLocal
         {
-            CalcularGananciaEstimada();
+            get => lbldetalleapuesta1.Text;
+            set => lbldetalleapuesta1.Text = value;
         }
-        private void cmbConfirmacionDeApuestaEquipo_SelectedIndexChanged(object sender, EventArgs e)
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Browsable(false)]
+        public string EquipoVisitante
         {
-            CargarTiposDeApuesta();
-            CalcularGananciaEstimada();
-            CargarDetallesApuesta();
+            get => lbldetalleapuesta2.Text;
+            set => lbldetalleapuesta2.Text = value;
         }
-        // Método para calcular la ganancia estimada en tiempo real
-        // Método para calcular la ganancia estimada en tiempo real
-        private void CalcularGananciaEstimada()
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Browsable(false)]
+        public string HoraPartido
         {
+            get => lblHora.Text;
+            set => lblHora.Text = value;
+        }
+
+        public string TipoApuesta => cmbConfirmacionDeApuestaTipoApuesta.SelectedItem.ToString();
+        public string EquipoApostado => cmbConfirmacionDeApuestaEquipo.SelectedItem.ToString();
+
+        public decimal MontoApuesta
+        {
+            get
+            {
+                if (decimal.TryParse(txtConfirmacionApuestaMonto.Text, out decimal monto))
+                    return monto;
+                return 0;
+            }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Browsable(false)]
+        public decimal GananciaEstimad
+        {
+            get
+            {
+                if (decimal.TryParse(txtConfirmacionApuestaGnanciaEstimada.Text, out decimal ganancia))
+                    return ganancia;
+                return 0;
+            }
+            set => txtConfirmacionApuestaGnanciaEstimada.Text = value.ToString("C");
+        }
+
+        public async Task MostrarError(string mensaje)
+        {
+            await Task.Run(() =>
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            });
+        }
+
+        public void MostrarMensaje(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void MostrarTicket(string mensajeTicket)
+        {
+            MessageBox.Show(mensajeTicket, "Ticket", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        // Implementación del método para navegar a FrmApuestas.
+        public void NavegarAFrmApuestas()
+        {
+            // Intentar obtener la instancia de FrmMenuPrincipal:
+            FrmMenuPrincipal frmMenu = null;
+            if (this.Owner is FrmMenuPrincipal)
+            {
+                frmMenu = (FrmMenuPrincipal)this.Owner;
+            }
+            else
+            {
+                frmMenu = Application.OpenForms.OfType<FrmMenuPrincipal>().FirstOrDefault();
+            }
+
+            // Crear la instancia del formulario de apuestas.
+            FrmApuestas frmApuestas = new FrmApuestas();
+
+            if (frmMenu != null)
+            {
+                // Asigna FrmMenuPrincipal como Owner de FrmApuestas para que puedas seguir apostando.
+                frmApuestas.Owner = frmMenu;
+                // Abre FrmApuestas dentro del contenedor PanelInicio.
+                frmMenu.AbrirFormularioHijo(frmApuestas);
+            }
+            else
+            {
+                // En caso de no encontrar FrmMenuPrincipal, muestra FrmApuestas de forma convencional.
+                frmApuestas.Show();
+            }
+
+            // Cierra el formulario actual.
+            this.Close();
+        }
+
+        // Métodos para asignar logos. Se usan bloques try/catch para mantener la imagen predeterminada en caso de error.
+        public void SetLogoEquipoLocal(string logoUrl)
+        {
+            if (string.IsNullOrEmpty(logoUrl))
+                return;
+
             try
             {
-                // Validamos que los campos estén completos
-                if (cmbConfirmacionDeApuestaEquipo.SelectedItem != null &&
-                    cmbConfirmacionDeApuestaTipoApuesta.SelectedItem != null &&
-                    !string.IsNullOrEmpty(txtConfirmacionApuestaMonto.Text))
-                {
-                    // Recuperamos el monto de la apuesta
-                    decimal montoApuesta = decimal.Parse(txtConfirmacionApuestaMonto.Text);
-
-                    // Calculamos la ganancia estimada dependiendo del tipo de apuesta
-                    string tipoApuesta = cmbConfirmacionDeApuestaTipoApuesta.SelectedItem.ToString();
-                    decimal gananciaEstimada = 0;
-
-                    // Comprobamos el tipo de apuesta seleccionada
-                    if (tipoApuesta == "Equipo Local")
-                    {
-                        gananciaEstimada = montoApuesta * cuotaEquipoLocal;
-                    }
-                    else if (tipoApuesta == "Equipo Visitante")
-                    {
-                        gananciaEstimada = montoApuesta * cuotaEquipoVisitante;
-                    }
-                    else if (tipoApuesta == "Empate")
-                    {
-                        gananciaEstimada = montoApuesta * cuotaEmpate;
-                    }
-
-                    // Mostramos la ganancia estimada en el TextBox
-                    txtConfirmacionApuestaGnanciaEstimada.Text = gananciaEstimada.ToString("C");
-                }
-                else
-                {
-                    // Limpiamos la ganancia estimada si falta algún dato
-                    txtConfirmacionApuestaGnanciaEstimada.Clear();
-                }
+                pictureBoxDetalleApuestas1.Load(logoUrl);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error al calcular la ganancia estimada: " + ex.Message);
+                // Si falla, no se modifica la imagen predeterminada.
             }
         }
 
-        // Método para cargar los detalles de la apuesta (equipos, logos, etc.)
-        private async void CargarDetallesApuesta()
+        public void SetLogoEquipoVisitante(string logoUrl)
         {
+            if (string.IsNullOrEmpty(logoUrl))
+                return;
+
             try
             {
-                // Ejemplo de equipos seleccionados
-                string equipoLocal = cmbConfirmacionDeApuestaEquipo.SelectedItem.ToString();
-                string equipoVisitante = "Boston Red Sox"; // Esto debería ser dinámico, dependiendo de la selección
-
-                lbldetalleapuesta1.Text = equipoLocal;
-                lbldetalleapuesta2.Text = equipoVisitante;
-
-                // Cargar los logos de los equipos en los PictureBox
-                await CargarLogoEquipo(equipoLocal, pictureBoxDetalleApuestas1);
-                await CargarLogoEquipo(equipoVisitante, pictureBoxDetalleApuestas2);
+                pictureBoxDetalleApuestas2.Load(logoUrl);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error al cargar los detalles de la apuesta: " + ex.Message);
+                // Si falla, se mantiene la imagen predeterminada.
             }
         }
 
-        // Método para cargar el logo de los equipos (usando la API de ESPN)
-        private async Task CargarLogoEquipo(string nombreEquipo, PictureBox pictureBox)
+        #endregion
+
+
+        // Evento del botón "Confirmar Apuesta"
+        private async void btnConfirmarApuesta_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                string urlEquipos = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams";
-                using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
-                {
-                    var response = await client.GetAsync(urlEquipos);
-                    var json = await response.Content.ReadAsStringAsync();
-                    Newtonsoft.Json.Linq.JObject root = Newtonsoft.Json.Linq.JObject.Parse(json);
-
-                    var equipos = root["sports"][0]["leagues"][0]["teams"];
-                    foreach (var equipo in equipos)
-                    {
-                        var team = equipo["team"];
-                        var nombre = team["displayName"].ToString();
-
-                        if (nombre.Equals(nombreEquipo, StringComparison.OrdinalIgnoreCase))
-                        {
-                            string logoUrl = team["logos"][0]["href"].ToString();
-                            pictureBox.Load(logoUrl);
-                            break;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar logo: " + ex.Message);
-            }
-        }
-        private void btnConfirmarApuesta_Click(object sender, EventArgs e)
-        {
-
-            // Aquí puedes agregar la lógica para guardar la apuesta o procesarla
-            MessageBox.Show("Apuesta confirmada!");
+            _presentador.CalcularGanancia();
+            await _presentador.ConfirmarApuesta();
         }
 
-        
+       
+       
     }
 }

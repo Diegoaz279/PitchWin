@@ -4,128 +4,198 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using PitchWin.Presentador;
+using PitchWin.Modelo;
+using PlayerUI;
 
 
 namespace PitchWin.Vista
 {
-    public partial class FrmApuestas : Form
+    public partial class FrmApuestas : Form, IFrmApuestas
     {
+        private readonly ApuestasPresentador _presentador;
+
         public FrmApuestas()
         {
             InitializeComponent();
-            _ = CargarPartidoDelDia();
+            // Se asume que creaste e inyectaste la implementación de ApiMLBService
+            _presentador = new ApuestasPresentador(this, new ApiMLBService());
+            _ = _presentador.CargarPartidosDelDia();
         }
 
-
-        private async Task CargarPartidoDelDia()
+        // Implementación de IFrmApuestas para actualizar la información de los partidos
+        public void SetPartidoData(int partidoNumero, string equipoLocal, string equipoVisitante, string horaPartido, string logoLocalUrl, string logoVisitanteUrl)
         {
-            try
+            switch (partidoNumero)
             {
-                string apiKey = "acb63c7f1d05bed289bb8be033d5dc5b";
-                string url = $"https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&markets=h2h&apiKey={apiKey}";
-
-                using (HttpClient client = new HttpClient())
-                {
-                    var response = await client.GetAsync(url);
-                    var json = await response.Content.ReadAsStringAsync();
-                    JArray partidos = JArray.Parse(json);
-
-                    if (partidos.Count > 0)
-                    {
-                        // Cargar el primer partido.
-                        var partido1 = partidos[0];
-                        string equipoLocal1 = partido1["home_team"].ToString();
-                        string equipoVisitante1 = partido1["away_team"].ToString();
-                        string horaPartido1 = DateTime.Parse(partido1["commence_time"].ToString()).ToLocalTime().ToString("hh:mm tt");
-
-                        // Cargar el segundo partido.
-                        var partido2 = partidos[1];
-                        string equipoLocal2 = partido2["home_team"].ToString();
-                        string equipoVisitante2 = partido2["away_team"].ToString();
-                        string horaPartido2 = DateTime.Parse(partido2["commence_time"].ToString()).ToLocalTime().ToString("hh:mm tt");
-
-                        // Cargar el tercer partido.
-                        var partido3 = partidos[2];
-                        string equipoLocal3 = partido3["home_team"].ToString();
-                        string equipoVisitante3 = partido3["away_team"].ToString();
-                        string horaPartido3 = DateTime.Parse(partido3["commence_time"].ToString()).ToLocalTime().ToString("hh:mm tt");
-
-                        // Cargar el cuarto partido.
-                        var partido4 = partidos[3];
-                        string equipoLocal4 = partido4["home_team"].ToString();
-                        string equipoVisitante4 = partido4["away_team"].ToString();
-                        string horaPartido4 = DateTime.Parse(partido4["commence_time"].ToString()).ToLocalTime().ToString("hh:mm tt");
-
-                        // Asignar los logos y datos a los PictureBox y Labels
-                        await CargarLogoEquipo(equipoLocal1, pictureBoxPartido1_1);
-                        await CargarLogoEquipo(equipoVisitante1, pictureBoxPartido1_2);
-                        lblPartido1_1.Text = equipoLocal1;
-                        lblPartido1_2.Text = equipoVisitante1;
-                        lblHoraPartido1.Text = horaPartido1;
-
-                        await CargarLogoEquipo(equipoLocal2, pictureBoxPartido2_1);
-                        await CargarLogoEquipo(equipoVisitante2, pictureBoxPartido2_2);
-                        lblPartido2_1.Text = equipoLocal2;
-                        lblPartido2_2.Text = equipoVisitante2;
-                        lblHoraPartido2.Text = horaPartido2;
-
-                        await CargarLogoEquipo(equipoLocal3, pictureBoxPartido3_1);
-                        await CargarLogoEquipo(equipoVisitante3, pictureBoxPartido3_2);
-                        lblPartido3_1.Text = equipoLocal3;
-                        lblPartido3_2.Text = equipoVisitante3;
-                        lblHoraPartido3.Text = horaPartido3;
-
-                        await CargarLogoEquipo(equipoLocal4, pictureBoxPartido4_1);
-                        await CargarLogoEquipo(equipoVisitante4, pictureBoxPartido4_2);
-                        lblPartido4_1.Text = equipoLocal4;
-                        lblPartido4_2.Text = equipoVisitante4;
-                        lblHoraPartido4.Text = horaPartido4;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los partidos: " + ex.Message);
+                case 1:
+                    lblPartido1_1.Text = equipoLocal;
+                    lblPartido1_2.Text = equipoVisitante;
+                    lblHoraPartido1.Text = horaPartido;
+                    pictureBoxPartido1_1.Load(logoLocalUrl);
+                    pictureBoxPartido1_2.Load(logoVisitanteUrl);
+                    break;
+                case 2:
+                    lblPartido2_1.Text = equipoLocal;
+                    lblPartido2_2.Text = equipoVisitante;
+                    lblHoraPartido2.Text = horaPartido;
+                    pictureBoxPartido2_1.Load(logoLocalUrl);
+                    pictureBoxPartido2_2.Load(logoVisitanteUrl);
+                    break;
+                case 3:
+                    lblPartido3_1.Text = equipoLocal;
+                    lblPartido3_2.Text = equipoVisitante;
+                    lblHoraPartido3.Text = horaPartido;
+                    pictureBoxPartido3_1.Load(logoLocalUrl);
+                    pictureBoxPartido3_2.Load(logoVisitanteUrl);
+                    break;
+                case 4:
+                    lblPartido4_1.Text = equipoLocal;
+                    lblPartido4_2.Text = equipoVisitante;
+                    lblHoraPartido4.Text = horaPartido;
+                    pictureBoxPartido4_1.Load(logoLocalUrl);
+                    pictureBoxPartido4_2.Load(logoVisitanteUrl);
+                    break;
+                default:
+                    break;
             }
         }
 
-        private async Task CargarLogoEquipo(string nombreEquipo, PictureBox pictureBox)
+        public async Task ShowError(string mensaje)
         {
-            try
-            {
-                string urlEquipos = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams";
-                using (HttpClient client = new HttpClient())
-                {
-                    var response = await client.GetAsync(urlEquipos);
-                    var json = await response.Content.ReadAsStringAsync();
-                    JObject root = JObject.Parse(json);
-
-                    var equipos = root["sports"][0]["leagues"][0]["teams"];
-                    foreach (var equipo in equipos)
-                    {
-                        var team = equipo["team"];
-                        var nombre = team["displayName"].ToString();
-
-                        if (nombre.Equals(nombreEquipo, StringComparison.OrdinalIgnoreCase))
-                        {
-                            string logoUrl = team["logos"][0]["href"].ToString();
-                            pictureBox.Load(logoUrl);
-                            break;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar logo: " + ex.Message);
-            }
-        }
-
-        private void btnApostarIncio1_Click(object sender, EventArgs e)
+            await Task.Run(() =>
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            );
+        } 
+        private void btnApostar1_Click(object sender, EventArgs e)
         {
-            FrmDetallesApuesta frmDetallesApuesta = new FrmDetallesApuesta();
-            frmDetallesApuesta.ShowDialog();
+            // Crear el objeto Partido con los datos del primer partido.
+            // Asegúrate de que lblPartido1_1, lblPartido1_2 y lblHoraPartido1 contengan la información correcta.
+            var partidoSeleccionado = new Partido
+            {
+                EquipoLocal = lblPartido1_1.Text,
+                EquipoVisitante = lblPartido1_2.Text,
+                // Si lblHoraPartido1 solo contiene la hora (ej. "10:30 AM"), podrías combinarla con la fecha actual:
+                HoraPartido = DateTime.Parse(lblHoraPartido1.Text) // O ajustar según tu formato de fecha/hora
+            };
+
+            // Instanciar el DbContext (sin usar 'using' para evitar que se deseche antes de usarlo en FrmDetallesApuesta).
+            var dbContext = new PitchWinDbContext();
+
+            // Crear la instancia del formulario de Detalle de Apuesta.
+            FrmDetallesApuesta frmDetalle = new FrmDetallesApuesta(partidoSeleccionado, dbContext);
+
+            // Configurar el formulario para que se muestre incrustado (no modal).
+            frmDetalle.TopLevel = false;
+            frmDetalle.FormBorderStyle = FormBorderStyle.None;
+            frmDetalle.Dock = DockStyle.Fill;
+
+            // Verificar si este formulario (FrmApuestas) tiene asignado un Owner que sea FrmMenuPrincipal.
+            if (this.Owner is FrmMenuPrincipal frmMenu)
+            {
+                // Usar el método del formulario principal para abrir el formulario hijo.
+                frmMenu.AbrirFormularioHijo(frmDetalle);
+            }
+            else
+            {
+                MessageBox.Show("No se puedo Seleccionar el partido");
+            }
         }
+        private void btnApostar2_Click(object sender, EventArgs e)
+        {
+            var partidoSeleccionado = new Partido
+            {
+                EquipoLocal = lblPartido2_1.Text,
+                EquipoVisitante = lblPartido2_2.Text,
+
+                HoraPartido = DateTime.Parse(lblHoraPartido2.Text)
+            };
+
+            var dbContext = new PitchWinDbContext();
+            // Crear la instancia del formulario de Detalle de Apuesta.
+            FrmDetallesApuesta frmDetalle = new FrmDetallesApuesta(partidoSeleccionado, dbContext);
+
+            // Configurar el formulario para que se muestre incrustado (no modal).
+            frmDetalle.TopLevel = false;
+            frmDetalle.FormBorderStyle = FormBorderStyle.None;
+            frmDetalle.Dock = DockStyle.Fill;
+
+            // Verificar si este formulario (FrmApuestas) tiene asignado un Owner que sea FrmMenuPrincipal.
+            if (this.Owner is FrmMenuPrincipal frmMenu)
+            {
+                // Usar el método del formulario principal para abrir el formulario hijo.
+                frmMenu.AbrirFormularioHijo(frmDetalle);
+            }
+            else
+            {
+                MessageBox.Show("No se puedo Seleccionar el partido");
+            }
+        }
+
+        private void btnApostar3_Click(object sender, EventArgs e)
+        {
+            var partidoSeleccionado = new Partido
+            {
+                EquipoLocal = lblPartido3_1.Text,
+                EquipoVisitante = lblPartido3_2.Text,
+
+                HoraPartido = DateTime.Parse(lblHoraPartido3.Text)
+            };
+
+            var dbContext = new PitchWinDbContext();
+            // Crear la instancia del formulario de Detalle de Apuesta.
+            FrmDetallesApuesta frmDetalle = new FrmDetallesApuesta(partidoSeleccionado, dbContext);
+
+            // Configurar el formulario para que se muestre incrustado (no modal).
+            frmDetalle.TopLevel = false;
+            frmDetalle.FormBorderStyle = FormBorderStyle.None;
+            frmDetalle.Dock = DockStyle.Fill;
+
+            // Verificar si este formulario (FrmApuestas) tiene asignado un Owner que sea FrmMenuPrincipal.
+            if (this.Owner is FrmMenuPrincipal frmMenu)
+            {
+                // Usar el método del formulario principal para abrir el formulario hijo.
+                frmMenu.AbrirFormularioHijo(frmDetalle);
+            }
+            else
+            {
+                MessageBox.Show("No se puedo Seleccionar el partido");
+            }
+        }
+
+        private void btnApostar4_Click(object sender, EventArgs e)
+        {          
+            var partidoSeleccionado = new Partido
+            {
+                EquipoLocal = lblPartido4_1.Text,
+                EquipoVisitante = lblPartido4_2.Text,
+               
+                HoraPartido = DateTime.Parse(lblHoraPartido4.Text) 
+            };
+       
+            var dbContext = new PitchWinDbContext();
+            // Crear la instancia del formulario de Detalle de Apuesta.
+            FrmDetallesApuesta frmDetalle = new FrmDetallesApuesta(partidoSeleccionado, dbContext);
+
+            // Configurar el formulario para que se muestre incrustado (no modal).
+            frmDetalle.TopLevel = false;
+            frmDetalle.FormBorderStyle = FormBorderStyle.None;
+            frmDetalle.Dock = DockStyle.Fill;
+
+            // Verificar si este formulario (FrmApuestas) tiene asignado un Owner que sea FrmMenuPrincipal.
+            if (this.Owner is FrmMenuPrincipal frmMenu)
+            {
+                // Usar el método del formulario principal para abrir el formulario hijo.
+                frmMenu.AbrirFormularioHijo(frmDetalle);
+            }
+            else
+            {
+                MessageBox.Show("No se puedo Seleccionar el partido");
+            }
+        }
+
+       
     }
 }
     

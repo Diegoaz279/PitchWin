@@ -1,95 +1,92 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using PitchWin.Presentador;
+using PlayerUI;
 
 namespace PitchWin.Vista
 {
-    public partial class FrmInicioo : Form
+    public partial class FrmInicioo : Form, IFrmInicioo
     {
+        private readonly FrmIniciooPresenter _presentador;
+       
+
+
         public FrmInicioo()
         {
             InitializeComponent();
-            _ = CargarPartidoDelDia();
-
+            _presentador = new FrmIniciooPresenter(this);
+            _ = _presentador.CargarPartidosDelDia();
         }
-        private async Task CargarPartidoDelDia()
+
+        public void SetEquipoLocal(string equipoLocal)
         {
-            try
-            {
-                string apiKey = "acb63c7f1d05bed289bb8be033d5dc5b";
-                string url = $"https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&markets=h2h&apiKey={apiKey}";
-
-                using (HttpClient client = new HttpClient())
-                {
-                    var response = await client.GetAsync(url);
-                    var json = await response.Content.ReadAsStringAsync();
-                    JArray partidos = JArray.Parse(json);
-
-                    if (partidos.Count > 0)
-                    {
-                        var partido = partidos[1];
-                        string equipoLocal = partido["home_team"].ToString();
-                        string equipoVisitante = partido["away_team"].ToString();
-                        string horaPartido = DateTime.Parse(partido["commence_time"].ToString()).ToLocalTime().ToString("hh:mm tt");
-
-                        // Cargar los nombres de los equipos en los labels
-                        lblInicio1.Text = equipoLocal;
-                        lblInicio2.Text = equipoVisitante;
-
-                        await CargarLogoEquipo(equipoLocal, pictureBoxInicio1);
-                        await CargarLogoEquipo(equipoVisitante, pictureBoxInicio2);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar el partido: " + ex.Message);
-            }
+            lblInicio1.Text = equipoLocal;
         }
 
-        private async Task CargarLogoEquipo(string nombreEquipo, PictureBox pictureBox)
+        public void SetEquipoVisitante(string equipoVisitante)
         {
-            try
-            {
-                string urlEquipos = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams";
-                using (HttpClient client = new HttpClient())
-                {
-                    var response = await client.GetAsync(urlEquipos);
-                    var json = await response.Content.ReadAsStringAsync();
-                    JObject root = JObject.Parse(json);
-
-                    var equipos = root["sports"][0]["leagues"][0]["teams"];
-                    foreach (var equipo in equipos)
-                    {
-                        var team = equipo["team"];
-                        var nombre = team["displayName"].ToString();
-
-                        if (nombre.Equals(nombreEquipo, StringComparison.OrdinalIgnoreCase))
-                        {
-                            string logoUrl = team["logos"][0]["href"].ToString();
-                            pictureBox.Load(logoUrl);
-                            break;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar logo: " + ex.Message);
-            }
+            lblInicio2.Text = equipoVisitante;
         }
-        private void btnApostarIncio_Click(object sender, EventArgs e)
+
+        public void SetHoraPartido(string horaPartido)
         {
-           FrmApuestas frmApuestas = new FrmApuestas();
-            frmApuestas.ShowDialog();
+
         }
 
+        public void SetLogoEquipoLocal(string logoUrl)
+        {
+            pictureBoxInicio1.Load(logoUrl);
+        }
+
+        public void SetLogoEquipoVisitante(string logoUrl)
+        {
+            pictureBoxInicio2.Load(logoUrl);
+        }
+
+        public async Task ShowError(string mensaje)
+        {
+            await Task.Run(() =>
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            });
+        }
+        public void NavegarAFrmApuestas()
+        {
+            // Intentar obtener la instancia de FrmMenuPrincipal:
+            FrmMenuPrincipal frmMenu = null;
+            if (this.Owner is FrmMenuPrincipal)
+            {
+                frmMenu = (FrmMenuPrincipal)this.Owner;
+            }
+            else
+            {
+                frmMenu = Application.OpenForms.OfType<FrmMenuPrincipal>().FirstOrDefault();
+            }
+
+            // Crear la instancia del formulario de apuestas.
+            FrmApuestas frmApuestas = new FrmApuestas();
+
+            if (frmMenu != null)
+            {
+                // Asigna FrmMenuPrincipal como Owner de FrmApuestas para que puedas seguir apostando.
+                frmApuestas.Owner = frmMenu;
+                // Abre FrmApuestas dentro del contenedor PanelInicio.
+                frmMenu.AbrirFormularioHijo(frmApuestas);
+            }
+            else
+            {
+                // En caso de no encontrar FrmMenuPrincipal, muestra FrmApuestas de forma convencional.
+                frmApuestas.Show();
+            }
+
+            // Cierra el formulario actual.
+            this.Close();
+        }
+
+        private void btnApostarInicio_Click(object sender, EventArgs e)
+        {
+            NavegarAFrmApuestas();
+        }
     }
 }

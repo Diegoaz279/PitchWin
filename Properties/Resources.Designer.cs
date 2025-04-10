@@ -123,6 +123,36 @@ namespace PitchWin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTNAYUDA {
+            get {
+                object obj = ResourceManager.GetObject("BTNAYUDA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTNREPORTE {
+            get {
+                object obj = ResourceManager.GetObject("BTNREPORTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTNTICKET {
+            get {
+                object obj = ResourceManager.GetObject("BTNTICKET", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap candado {
             get {
                 object obj = ResourceManager.GetObject("candado", resourceCulture);
@@ -146,6 +176,16 @@ namespace PitchWin.Properties {
         internal static System.Drawing.Bitmap ChatGPT_Image_1_abr_2025__10_41_29_a_m_ {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 1 abr 2025, 10_41_29 a.m.", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_10_abr_2025__02_33_05_a_m_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 10 abr 2025, 02_33_05 a.m.", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

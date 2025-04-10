@@ -65,10 +65,12 @@
             label6 = new Label();
             label7 = new Label();
             cmbConfirmacionDeApuestaTipoApuesta = new Guna.UI2.WinForms.Guna2ComboBox();
+            label9 = new Label();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            lblHora = new Label();
             label3 = new Label();
             tableLayoutPanel8 = new TableLayoutPanel();
             btnConfirmarApuesta = new Guna.UI2.WinForms.Guna2Button();
-            btnAtrasDetalleApuesta = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel3.SuspendLayout();
@@ -87,6 +89,7 @@
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel3.ColumnCount = 3;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
@@ -108,7 +111,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Rubik Mono One", 27.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 153, 46);
+            label1.ForeColor = Color.FromArgb(252, 206, 66);
             label1.Location = new Point(245, 41);
             label1.Name = "label1";
             label1.Size = new Size(814, 69);
@@ -128,6 +131,7 @@
             // 
             // tableLayoutPanel2
             // 
+            tableLayoutPanel2.BackColor = Color.FromArgb(20, 20, 19);
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.5F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 97F));
@@ -281,6 +285,9 @@
             tableLayoutPanel7.Controls.Add(label6, 3, 1);
             tableLayoutPanel7.Controls.Add(label7, 4, 1);
             tableLayoutPanel7.Controls.Add(cmbConfirmacionDeApuestaTipoApuesta, 2, 2);
+            tableLayoutPanel7.Controls.Add(label9, 2, 4);
+            tableLayoutPanel7.Controls.Add(guna2TextBox1, 0, 0);
+            tableLayoutPanel7.Controls.Add(lblHora, 2, 5);
             tableLayoutPanel7.Dock = DockStyle.Fill;
             tableLayoutPanel7.Location = new Point(3, 45);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -306,7 +313,7 @@
             txtConfirmacionApuestaFecha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtConfirmacionApuestaFecha.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmacionApuestaFecha.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaFecha.FillColor = Color.FromArgb(0, 30, 59);
+            txtConfirmacionApuestaFecha.FillColor = Color.FromArgb(12, 12, 12);
             txtConfirmacionApuestaFecha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmacionApuestaFecha.Font = new Font("Inria Sans", 8.999999F);
             txtConfirmacionApuestaFecha.ForeColor = Color.White;
@@ -315,9 +322,10 @@
             txtConfirmacionApuestaFecha.Margin = new Padding(4, 5, 4, 5);
             txtConfirmacionApuestaFecha.Name = "txtConfirmacionApuestaFecha";
             txtConfirmacionApuestaFecha.PlaceholderText = "";
+            txtConfirmacionApuestaFecha.ReadOnly = true;
             txtConfirmacionApuestaFecha.SelectedText = "";
             txtConfirmacionApuestaFecha.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtConfirmacionApuestaFecha.Size = new Size(277, 30);
+            txtConfirmacionApuestaFecha.Size = new Size(277, 35);
             txtConfirmacionApuestaFecha.TabIndex = 35;
             // 
             // txtConfirmacionApuestaGnanciaEstimada
@@ -331,7 +339,7 @@
             txtConfirmacionApuestaGnanciaEstimada.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtConfirmacionApuestaGnanciaEstimada.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmacionApuestaGnanciaEstimada.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaGnanciaEstimada.FillColor = Color.FromArgb(0, 30, 59);
+            txtConfirmacionApuestaGnanciaEstimada.FillColor = Color.FromArgb(12, 12, 12);
             txtConfirmacionApuestaGnanciaEstimada.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmacionApuestaGnanciaEstimada.Font = new Font("Inria Sans", 8.999999F);
             txtConfirmacionApuestaGnanciaEstimada.ForeColor = Color.White;
@@ -342,7 +350,7 @@
             txtConfirmacionApuestaGnanciaEstimada.PlaceholderText = "";
             txtConfirmacionApuestaGnanciaEstimada.SelectedText = "";
             txtConfirmacionApuestaGnanciaEstimada.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtConfirmacionApuestaGnanciaEstimada.Size = new Size(277, 31);
+            txtConfirmacionApuestaGnanciaEstimada.Size = new Size(277, 36);
             txtConfirmacionApuestaGnanciaEstimada.TabIndex = 34;
             // 
             // txtConfirmacionApuestaMonto
@@ -356,7 +364,7 @@
             txtConfirmacionApuestaMonto.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtConfirmacionApuestaMonto.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmacionApuestaMonto.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtConfirmacionApuestaMonto.FillColor = Color.FromArgb(0, 30, 59);
+            txtConfirmacionApuestaMonto.FillColor = Color.FromArgb(12, 12, 12);
             txtConfirmacionApuestaMonto.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmacionApuestaMonto.Font = new Font("Inria Sans", 8.999999F);
             txtConfirmacionApuestaMonto.ForeColor = Color.White;
@@ -367,7 +375,7 @@
             txtConfirmacionApuestaMonto.PlaceholderText = "";
             txtConfirmacionApuestaMonto.SelectedText = "";
             txtConfirmacionApuestaMonto.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtConfirmacionApuestaMonto.Size = new Size(277, 31);
+            txtConfirmacionApuestaMonto.Size = new Size(277, 36);
             txtConfirmacionApuestaMonto.TabIndex = 33;
             // 
             // label4
@@ -403,13 +411,14 @@
             cmbConfirmacionDeApuestaEquipo.CustomizableEdges = customizableEdges7;
             cmbConfirmacionDeApuestaEquipo.DrawMode = DrawMode.OwnerDrawFixed;
             cmbConfirmacionDeApuestaEquipo.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbConfirmacionDeApuestaEquipo.FillColor = Color.FromArgb(0, 30, 59);
+            cmbConfirmacionDeApuestaEquipo.FillColor = Color.FromArgb(12, 12, 12);
             cmbConfirmacionDeApuestaEquipo.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbConfirmacionDeApuestaEquipo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             cmbConfirmacionDeApuestaEquipo.Font = new Font("Segoe UI", 10F);
             cmbConfirmacionDeApuestaEquipo.ForeColor = Color.White;
             cmbConfirmacionDeApuestaEquipo.ItemHeight = 30;
             cmbConfirmacionDeApuestaEquipo.Location = new Point(20, 42);
+            cmbConfirmacionDeApuestaEquipo.MaximumSize = new Size(279, 0);
             cmbConfirmacionDeApuestaEquipo.Name = "cmbConfirmacionDeApuestaEquipo";
             cmbConfirmacionDeApuestaEquipo.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbConfirmacionDeApuestaEquipo.Size = new Size(279, 36);
@@ -460,24 +469,73 @@
             cmbConfirmacionDeApuestaTipoApuesta.CustomizableEdges = customizableEdges9;
             cmbConfirmacionDeApuestaTipoApuesta.DrawMode = DrawMode.OwnerDrawFixed;
             cmbConfirmacionDeApuestaTipoApuesta.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbConfirmacionDeApuestaTipoApuesta.FillColor = Color.FromArgb(0, 30, 59);
+            cmbConfirmacionDeApuestaTipoApuesta.FillColor = Color.FromArgb(12, 12, 12);
             cmbConfirmacionDeApuestaTipoApuesta.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbConfirmacionDeApuestaTipoApuesta.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             cmbConfirmacionDeApuestaTipoApuesta.Font = new Font("Inria Sans", 8.999999F);
             cmbConfirmacionDeApuestaTipoApuesta.ForeColor = Color.White;
             cmbConfirmacionDeApuestaTipoApuesta.ItemHeight = 30;
             cmbConfirmacionDeApuestaTipoApuesta.Location = new Point(305, 42);
+            cmbConfirmacionDeApuestaTipoApuesta.MaximumSize = new Size(279, 0);
             cmbConfirmacionDeApuestaTipoApuesta.Name = "cmbConfirmacionDeApuestaTipoApuesta";
             cmbConfirmacionDeApuestaTipoApuesta.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cmbConfirmacionDeApuestaTipoApuesta.Size = new Size(279, 36);
             cmbConfirmacionDeApuestaTipoApuesta.TabIndex = 36;
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.Bottom;
+            label9.AutoSize = true;
+            label9.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(343, 117);
+            label9.Name = "label9";
+            label9.Size = new Size(202, 28);
+            label9.TabIndex = 37;
+            label9.Text = "HORA DEL PARTIDO:";
+            // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.Anchor = AnchorStyles.Top;
+            guna2TextBox1.BorderColor = SystemColors.ActiveCaption;
+            guna2TextBox1.BorderRadius = 5;
+            guna2TextBox1.CustomizableEdges = customizableEdges11;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FillColor = Color.FromArgb(0, 30, 59);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Inria Sans", 8.999999F);
+            guna2TextBox1.ForeColor = Color.White;
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new Point(4, 5);
+            guna2TextBox1.Margin = new Padding(4, 5, 4, 5);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox1.Size = new Size(9, 1);
+            guna2TextBox1.TabIndex = 38;
+            // 
+            // lblHora
+            // 
+            lblHora.Anchor = AnchorStyles.Top;
+            lblHora.AutoSize = true;
+            lblHora.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
+            lblHora.ForeColor = Color.White;
+            lblHora.Location = new Point(444, 145);
+            lblHora.Name = "lblHora";
+            lblHora.Size = new Size(0, 28);
+            lblHora.TabIndex = 39;
             // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Bottom;
             label3.AutoSize = true;
             label3.Font = new Font("Rubik Mono One", 10.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(255, 216, 57);
+            label3.ForeColor = Color.FromArgb(252, 206, 66);
             label3.Location = new Point(505, 14);
             label3.Name = "label3";
             label3.Size = new Size(172, 28);
@@ -486,21 +544,18 @@
             // 
             // tableLayoutPanel8
             // 
-            tableLayoutPanel8.ColumnCount = 5;
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.01514F));
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.55995F));
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.10477281F));
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.305F));
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.0151367F));
-            tableLayoutPanel8.Controls.Add(btnConfirmarApuesta, 3, 1);
-            tableLayoutPanel8.Controls.Add(btnAtrasDetalleApuesta, 1, 1);
+            tableLayoutPanel8.ColumnCount = 3;
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanel8.Controls.Add(btnConfirmarApuesta, 1, 1);
             tableLayoutPanel8.Dock = DockStyle.Fill;
             tableLayoutPanel8.Location = new Point(3, 275);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
             tableLayoutPanel8.RowCount = 3;
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 9.302325F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 81.39535F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 9.302325F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 9.302326F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 81.3953552F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 9.302326F));
             tableLayoutPanel8.Size = new Size(1176, 87);
             tableLayoutPanel8.TabIndex = 24;
             // 
@@ -508,46 +563,28 @@
             // 
             btnConfirmarApuesta.Anchor = AnchorStyles.None;
             btnConfirmarApuesta.BorderRadius = 10;
-            btnConfirmarApuesta.CustomizableEdges = customizableEdges11;
+            btnConfirmarApuesta.CustomizableEdges = customizableEdges13;
             btnConfirmarApuesta.DisabledState.BorderColor = Color.DarkGray;
             btnConfirmarApuesta.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConfirmarApuesta.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnConfirmarApuesta.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnConfirmarApuesta.FillColor = Color.FromArgb(230, 89, 25);
+            btnConfirmarApuesta.FillColor = Color.FromArgb(252, 206, 66);
             btnConfirmarApuesta.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            btnConfirmarApuesta.ForeColor = Color.White;
-            btnConfirmarApuesta.Location = new Point(612, 18);
+            btnConfirmarApuesta.ForeColor = SystemColors.WindowText;
+            btnConfirmarApuesta.Location = new Point(463, 15);
             btnConfirmarApuesta.Name = "btnConfirmarApuesta";
-            btnConfirmarApuesta.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnConfirmarApuesta.Size = new Size(248, 50);
+            btnConfirmarApuesta.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnConfirmarApuesta.Size = new Size(248, 56);
             btnConfirmarApuesta.TabIndex = 1;
             btnConfirmarApuesta.Text = "CONFIRMAR APUESTA";
-            // 
-            // btnAtrasDetalleApuesta
-            // 
-            btnAtrasDetalleApuesta.Anchor = AnchorStyles.None;
-            btnAtrasDetalleApuesta.BorderRadius = 10;
-            btnAtrasDetalleApuesta.CustomizableEdges = customizableEdges13;
-            btnAtrasDetalleApuesta.DisabledState.BorderColor = Color.DarkGray;
-            btnAtrasDetalleApuesta.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAtrasDetalleApuesta.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAtrasDetalleApuesta.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAtrasDetalleApuesta.FillColor = Color.FromArgb(230, 89, 25);
-            btnAtrasDetalleApuesta.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            btnAtrasDetalleApuesta.ForeColor = Color.White;
-            btnAtrasDetalleApuesta.Location = new Point(378, 19);
-            btnAtrasDetalleApuesta.Name = "btnAtrasDetalleApuesta";
-            btnAtrasDetalleApuesta.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnAtrasDetalleApuesta.Size = new Size(120, 47);
-            btnAtrasDetalleApuesta.TabIndex = 2;
-            btnAtrasDetalleApuesta.Text = "ATRAS";
+            btnConfirmarApuesta.Click += btnConfirmarApuesta_Click_1;
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
             label2.Font = new Font("Rubik Mono One", 13.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(255, 216, 57);
+            label2.ForeColor = Color.FromArgb(252, 206, 66);
             label2.Location = new Point(517, 19);
             label2.Name = "label2";
             label2.Size = new Size(190, 35);
@@ -556,6 +593,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.77777767F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 94.44444F));
@@ -575,7 +613,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 30, 59);
+            BackColor = Color.FromArgb(12, 12, 12);
             ClientSize = new Size(1306, 767);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(tableLayoutPanel3);
@@ -630,7 +668,9 @@
         private Label label3;
         private TableLayoutPanel tableLayoutPanel8;
         private Guna.UI2.WinForms.Guna2Button btnConfirmarApuesta;
-        private Guna.UI2.WinForms.Guna2Button btnAtrasDetalleApuesta;
         private TableLayoutPanel tableLayoutPanel1;
+        private Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Label lblHora;
     }
 }

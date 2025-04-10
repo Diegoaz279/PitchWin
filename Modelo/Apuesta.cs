@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PitchWin.Modelo
+﻿namespace PitchWin.Modelo
 {
-    internal class Apuesta
+    public class Apuesta
     {
+        public int Id { get; set; }
+        public int TicketId { get; set; }  // Clave foránea hacia Ticket
+        public Ticket Ticket { get; set; } // Relación de navegación
+
+        public string TipoApuesta { get; set; } // Por ejemplo, "Local", "Visitante", "Empate"
+        public decimal GananciaEstimad { get; set; }
     }
 }

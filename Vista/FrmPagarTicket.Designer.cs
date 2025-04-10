@@ -81,7 +81,7 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = Color.FromArgb(0, 30, 59);
+            tableLayoutPanel1.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.77777767F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 94.44444F));
@@ -110,7 +110,7 @@
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.BackColor = Color.FromArgb(0, 30, 59);
+            tableLayoutPanel2.BackColor = Color.FromArgb(20, 20, 19);
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.5F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 97F));
@@ -135,7 +135,7 @@
             label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
             label2.Font = new Font("Rubik Mono One", 13.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(255, 216, 57);
+            label2.ForeColor = Color.FromArgb(252, 206, 66);
             label2.Location = new Point(498, 30);
             label2.Name = "label2";
             label2.Size = new Size(340, 35);
@@ -171,15 +171,16 @@
             btnVerificarTicket.DisabledState.CustomBorderColor = Color.DarkGray;
             btnVerificarTicket.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnVerificarTicket.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnVerificarTicket.FillColor = Color.FromArgb(230, 89, 25);
+            btnVerificarTicket.FillColor = Color.FromArgb(252, 206, 66);
             btnVerificarTicket.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            btnVerificarTicket.ForeColor = Color.White;
+            btnVerificarTicket.ForeColor = SystemColors.WindowText;
             btnVerificarTicket.Location = new Point(767, 70);
             btnVerificarTicket.Name = "btnVerificarTicket";
             btnVerificarTicket.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnVerificarTicket.Size = new Size(170, 40);
             btnVerificarTicket.TabIndex = 39;
             btnVerificarTicket.Text = "VERIFICAR";
+            btnVerificarTicket.Click += btnVerificarTicket_Click;
             // 
             // label9
             // 
@@ -197,7 +198,7 @@
             // 
             txtPagarTicketIdTicket.BackColor = Color.Transparent;
             txtPagarTicketIdTicket.BorderColor = SystemColors.ActiveCaption;
-            txtPagarTicketIdTicket.BorderRadius = 20;
+            txtPagarTicketIdTicket.BorderRadius = 10;
             txtPagarTicketIdTicket.CustomizableEdges = customizableEdges3;
             txtPagarTicketIdTicket.DefaultText = "";
             txtPagarTicketIdTicket.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -205,7 +206,7 @@
             txtPagarTicketIdTicket.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPagarTicketIdTicket.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPagarTicketIdTicket.Dock = DockStyle.Fill;
-            txtPagarTicketIdTicket.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketIdTicket.FillColor = Color.FromArgb(12, 12, 12);
             txtPagarTicketIdTicket.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPagarTicketIdTicket.Font = new Font("Inria Sans", 8.999999F);
             txtPagarTicketIdTicket.ForeColor = Color.White;
@@ -275,14 +276,14 @@
             txtPagarTicketFecha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtPagarTicketFecha.BackColor = Color.Transparent;
             txtPagarTicketFecha.BorderColor = SystemColors.ActiveCaption;
-            txtPagarTicketFecha.BorderRadius = 20;
+            txtPagarTicketFecha.BorderRadius = 10;
             txtPagarTicketFecha.CustomizableEdges = customizableEdges5;
             txtPagarTicketFecha.DefaultText = "";
             txtPagarTicketFecha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPagarTicketFecha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtPagarTicketFecha.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPagarTicketFecha.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPagarTicketFecha.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketFecha.FillColor = Color.FromArgb(12, 12, 12);
             txtPagarTicketFecha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPagarTicketFecha.Font = new Font("Inria Sans", 8.999999F);
             txtPagarTicketFecha.ForeColor = Color.White;
@@ -302,14 +303,14 @@
             txtPagarTicketGanancia.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtPagarTicketGanancia.BackColor = Color.Transparent;
             txtPagarTicketGanancia.BorderColor = SystemColors.ActiveCaption;
-            txtPagarTicketGanancia.BorderRadius = 20;
+            txtPagarTicketGanancia.BorderRadius = 10;
             txtPagarTicketGanancia.CustomizableEdges = customizableEdges7;
             txtPagarTicketGanancia.DefaultText = "";
             txtPagarTicketGanancia.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPagarTicketGanancia.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtPagarTicketGanancia.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPagarTicketGanancia.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPagarTicketGanancia.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketGanancia.FillColor = Color.FromArgb(12, 12, 12);
             txtPagarTicketGanancia.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPagarTicketGanancia.Font = new Font("Inria Sans", 8.999999F);
             txtPagarTicketGanancia.ForeColor = Color.White;
@@ -329,14 +330,14 @@
             txtPagarTicketMonto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtPagarTicketMonto.BackColor = Color.Transparent;
             txtPagarTicketMonto.BorderColor = SystemColors.ActiveCaption;
-            txtPagarTicketMonto.BorderRadius = 20;
+            txtPagarTicketMonto.BorderRadius = 10;
             txtPagarTicketMonto.CustomizableEdges = customizableEdges9;
             txtPagarTicketMonto.DefaultText = "";
             txtPagarTicketMonto.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPagarTicketMonto.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtPagarTicketMonto.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPagarTicketMonto.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPagarTicketMonto.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketMonto.FillColor = Color.FromArgb(12, 12, 12);
             txtPagarTicketMonto.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPagarTicketMonto.Font = new Font("Inria Sans", 8.999999F);
             txtPagarTicketMonto.ForeColor = Color.White;
@@ -416,14 +417,14 @@
             txtPagarTicketEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtPagarTicketEquipo.BackColor = Color.Transparent;
             txtPagarTicketEquipo.BorderColor = SystemColors.ActiveCaption;
-            txtPagarTicketEquipo.BorderRadius = 20;
+            txtPagarTicketEquipo.BorderRadius = 10;
             txtPagarTicketEquipo.CustomizableEdges = customizableEdges11;
             txtPagarTicketEquipo.DefaultText = "";
             txtPagarTicketEquipo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPagarTicketEquipo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtPagarTicketEquipo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPagarTicketEquipo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPagarTicketEquipo.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketEquipo.FillColor = Color.FromArgb(12, 12, 12);
             txtPagarTicketEquipo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPagarTicketEquipo.Font = new Font("Inria Sans", 8.999999F);
             txtPagarTicketEquipo.ForeColor = Color.White;
@@ -443,14 +444,14 @@
             txtPagarTicketTipoCuota.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtPagarTicketTipoCuota.BackColor = Color.Transparent;
             txtPagarTicketTipoCuota.BorderColor = SystemColors.ActiveCaption;
-            txtPagarTicketTipoCuota.BorderRadius = 20;
+            txtPagarTicketTipoCuota.BorderRadius = 10;
             txtPagarTicketTipoCuota.CustomizableEdges = customizableEdges13;
             txtPagarTicketTipoCuota.DefaultText = "";
             txtPagarTicketTipoCuota.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPagarTicketTipoCuota.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtPagarTicketTipoCuota.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPagarTicketTipoCuota.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPagarTicketTipoCuota.FillColor = Color.FromArgb(0, 30, 59);
+            txtPagarTicketTipoCuota.FillColor = Color.FromArgb(12, 12, 12);
             txtPagarTicketTipoCuota.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPagarTicketTipoCuota.Font = new Font("Inria Sans", 8.999999F);
             txtPagarTicketTipoCuota.ForeColor = Color.White;
@@ -470,7 +471,7 @@
             label3.Anchor = AnchorStyles.Bottom;
             label3.AutoSize = true;
             label3.Font = new Font("Rubik Mono One", 10.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(255, 216, 57);
+            label3.ForeColor = Color.FromArgb(252, 206, 66);
             label3.Location = new Point(559, 21);
             label3.Name = "label3";
             label3.Size = new Size(172, 28);
@@ -503,19 +504,20 @@
             btnPagarTicket.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPagarTicket.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnPagarTicket.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPagarTicket.FillColor = Color.FromArgb(230, 89, 25);
+            btnPagarTicket.FillColor = Color.FromArgb(252, 206, 66);
             btnPagarTicket.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            btnPagarTicket.ForeColor = Color.White;
+            btnPagarTicket.ForeColor = SystemColors.WindowText;
             btnPagarTicket.Location = new Point(536, 21);
             btnPagarTicket.Name = "btnPagarTicket";
             btnPagarTicket.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnPagarTicket.Size = new Size(207, 59);
             btnPagarTicket.TabIndex = 2;
             btnPagarTicket.Text = "PAGAR TICKET";
+            btnPagarTicket.Click += btnPagarTicket_Click;
             // 
             // tableLayoutPanel3
             // 
-            tableLayoutPanel3.BackColor = Color.FromArgb(0, 30, 59);
+            tableLayoutPanel3.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel3.ColumnCount = 3;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
@@ -537,7 +539,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Rubik Mono One", 27.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 153, 46);
+            label1.ForeColor = Color.FromArgb(252, 206, 66);
             label1.Location = new Point(402, 41);
             label1.Name = "label1";
             label1.Size = new Size(618, 69);

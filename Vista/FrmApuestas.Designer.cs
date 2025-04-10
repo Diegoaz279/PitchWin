@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmApuestas));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -126,6 +126,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
@@ -152,7 +153,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(0, 30, 59);
+            panel1.BackColor = Color.FromArgb(0, 30, 48);
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(tableLayoutPanel2);
             panel1.Dock = DockStyle.Fill;
@@ -163,6 +164,7 @@
             // 
             // tableLayoutPanel2
             // 
+            tableLayoutPanel2.BackColor = Color.FromArgb(20, 20, 19);
             tableLayoutPanel2.ColumnCount = 12;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.381215F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0497236F));
@@ -190,7 +192,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel2.Size = new Size(1129, 111);
-            tableLayoutPanel2.TabIndex = 4;
+            tableLayoutPanel2.TabIndex = 6;
             // 
             // pictureBox1
             // 
@@ -318,27 +320,27 @@
             // btnApostar1
             // 
             btnApostar1.BorderRadius = 10;
-            btnApostar1.CustomizableEdges = customizableEdges9;
+            btnApostar1.CustomizableEdges = customizableEdges1;
             btnApostar1.DisabledState.BorderColor = Color.DarkGray;
             btnApostar1.DisabledState.CustomBorderColor = Color.DarkGray;
             btnApostar1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnApostar1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnApostar1.Dock = DockStyle.Fill;
-            btnApostar1.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar1.FillColor = Color.FromArgb(252, 206, 66);
             btnApostar1.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostar1.ForeColor = Color.White;
+            btnApostar1.ForeColor = SystemColors.WindowText;
             btnApostar1.Location = new Point(3, 24);
             btnApostar1.MaximumSize = new Size(150, 60);
             btnApostar1.Name = "btnApostar1";
-            btnApostar1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnApostar1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnApostar1.Size = new Size(112, 46);
             btnApostar1.TabIndex = 2;
             btnApostar1.Text = "APOSTAR";
-            btnApostar1.Click += btnApostarIncio1_Click;
+            btnApostar1.Click += btnApostar1_Click;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(0, 30, 59);
+            panel2.BackColor = Color.FromArgb(0, 30, 48);
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(tableLayoutPanel8);
             panel2.Dock = DockStyle.Fill;
@@ -349,6 +351,7 @@
             // 
             // tableLayoutPanel8
             // 
+            tableLayoutPanel8.BackColor = Color.FromArgb(20, 20, 19);
             tableLayoutPanel8.ColumnCount = 12;
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.381215F));
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0497236F));
@@ -376,7 +379,7 @@
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel8.Size = new Size(1129, 107);
-            tableLayoutPanel8.TabIndex = 6;
+            tableLayoutPanel8.TabIndex = 7;
             // 
             // pictureBox4
             // 
@@ -504,26 +507,27 @@
             // btnApostar2
             // 
             btnApostar2.BorderRadius = 10;
-            btnApostar2.CustomizableEdges = customizableEdges11;
+            btnApostar2.CustomizableEdges = customizableEdges3;
             btnApostar2.DisabledState.BorderColor = Color.DarkGray;
             btnApostar2.DisabledState.CustomBorderColor = Color.DarkGray;
             btnApostar2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnApostar2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnApostar2.Dock = DockStyle.Fill;
-            btnApostar2.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar2.FillColor = Color.FromArgb(252, 206, 66);
             btnApostar2.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostar2.ForeColor = Color.White;
+            btnApostar2.ForeColor = SystemColors.WindowText;
             btnApostar2.Location = new Point(3, 22);
             btnApostar2.MaximumSize = new Size(150, 60);
             btnApostar2.Name = "btnApostar2";
-            btnApostar2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnApostar2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnApostar2.Size = new Size(112, 45);
             btnApostar2.TabIndex = 2;
             btnApostar2.Text = "APOSTAR";
+            btnApostar2.Click += btnApostar2_Click;
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(0, 30, 59);
+            panel3.BackColor = Color.FromArgb(0, 30, 48);
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(tableLayoutPanel13);
             panel3.Dock = DockStyle.Fill;
@@ -534,6 +538,7 @@
             // 
             // tableLayoutPanel13
             // 
+            tableLayoutPanel13.BackColor = Color.FromArgb(20, 20, 19);
             tableLayoutPanel13.ColumnCount = 12;
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.381215F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0497236F));
@@ -561,7 +566,7 @@
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel13.Size = new Size(1129, 109);
-            tableLayoutPanel13.TabIndex = 4;
+            tableLayoutPanel13.TabIndex = 5;
             // 
             // pictureBoxPartido3_1
             // 
@@ -678,22 +683,23 @@
             // btnApostar3
             // 
             btnApostar3.BorderRadius = 10;
-            btnApostar3.CustomizableEdges = customizableEdges13;
+            btnApostar3.CustomizableEdges = customizableEdges5;
             btnApostar3.DisabledState.BorderColor = Color.DarkGray;
             btnApostar3.DisabledState.CustomBorderColor = Color.DarkGray;
             btnApostar3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnApostar3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnApostar3.Dock = DockStyle.Fill;
-            btnApostar3.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar3.FillColor = Color.FromArgb(252, 206, 66);
             btnApostar3.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostar3.ForeColor = Color.White;
+            btnApostar3.ForeColor = SystemColors.WindowText;
             btnApostar3.Location = new Point(3, 22);
             btnApostar3.MaximumSize = new Size(150, 60);
             btnApostar3.Name = "btnApostar3";
-            btnApostar3.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnApostar3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnApostar3.Size = new Size(112, 47);
             btnApostar3.TabIndex = 2;
             btnApostar3.Text = "APOSTAR";
+            btnApostar3.Click += btnApostar3_Click;
             // 
             // pictureBox7
             // 
@@ -708,7 +714,7 @@
             // 
             // panel4
             // 
-            panel4.BackColor = Color.FromArgb(0, 30, 59);
+            panel4.BackColor = Color.FromArgb(0, 30, 48);
             panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Controls.Add(tableLayoutPanel18);
             panel4.Dock = DockStyle.Fill;
@@ -719,6 +725,7 @@
             // 
             // tableLayoutPanel18
             // 
+            tableLayoutPanel18.BackColor = Color.FromArgb(20, 20, 19);
             tableLayoutPanel18.ColumnCount = 12;
             tableLayoutPanel18.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.381215F));
             tableLayoutPanel18.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.0497236F));
@@ -746,7 +753,7 @@
             tableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel18.Size = new Size(1129, 109);
-            tableLayoutPanel18.TabIndex = 4;
+            tableLayoutPanel18.TabIndex = 5;
             // 
             // pictureBox10
             // 
@@ -874,25 +881,27 @@
             // btnApostar4
             // 
             btnApostar4.BorderRadius = 10;
-            btnApostar4.CustomizableEdges = customizableEdges15;
+            btnApostar4.CustomizableEdges = customizableEdges7;
             btnApostar4.DisabledState.BorderColor = Color.DarkGray;
             btnApostar4.DisabledState.CustomBorderColor = Color.DarkGray;
             btnApostar4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnApostar4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnApostar4.Dock = DockStyle.Fill;
-            btnApostar4.FillColor = Color.FromArgb(230, 89, 25);
+            btnApostar4.FillColor = Color.FromArgb(252, 206, 66);
             btnApostar4.Font = new Font("Inria Sans", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnApostar4.ForeColor = Color.White;
+            btnApostar4.ForeColor = SystemColors.WindowText;
             btnApostar4.Location = new Point(3, 22);
             btnApostar4.MaximumSize = new Size(150, 60);
             btnApostar4.Name = "btnApostar4";
-            btnApostar4.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnApostar4.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnApostar4.Size = new Size(112, 47);
             btnApostar4.TabIndex = 2;
             btnApostar4.Text = "APOSTAR";
+            btnApostar4.Click += btnApostar4_Click;
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.BackColor = Color.FromArgb(12, 12, 12);
             tableLayoutPanel3.ColumnCount = 3;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.5F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95F));
@@ -916,7 +925,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Rubik Mono One", 31.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 153, 46);
+            label1.ForeColor = Color.FromArgb(252, 206, 66);
             label1.Location = new Point(130, 56);
             label1.Margin = new Padding(5);
             label1.Name = "label1";
@@ -988,22 +997,12 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel1;
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
         private TableLayoutPanel tableLayoutPanel3;
         private Label label1;
-        private TableLayoutPanel tableLayoutPanel13;
-        private PictureBox pictureBoxPartido3_1;
-        private PictureBox pictureBoxPartido3_2;
-        private TableLayoutPanel tableLayoutPanel14;
-        private Label lblPartido3_1;
-        private TableLayoutPanel tableLayoutPanel15;
-        private Label lblPartido3_2;
-        private TableLayoutPanel tableLayoutPanel16;
-        private Label lblHoraPartido3;
-        private PictureBox pictureBox7;
+        private Panel panel1;
         private TableLayoutPanel tableLayoutPanel2;
         private PictureBox pictureBox1;
         private PictureBox pictureBoxPartido1_1;
@@ -1014,6 +1013,7 @@
         private Label lblPartido1_2;
         private TableLayoutPanel tableLayoutPanel6;
         private Label lblHoraPartido1;
+        private Guna.UI2.WinForms.Guna2Button btnApostar1;
         private TableLayoutPanel tableLayoutPanel8;
         private PictureBox pictureBox4;
         private PictureBox pictureBoxPartido2_1;
@@ -1024,6 +1024,18 @@
         private Label lblPartido2_2;
         private TableLayoutPanel tableLayoutPanel11;
         private Label lblHoraPartido2;
+        private Guna.UI2.WinForms.Guna2Button btnApostar2;
+        private TableLayoutPanel tableLayoutPanel13;
+        private PictureBox pictureBoxPartido3_1;
+        private PictureBox pictureBoxPartido3_2;
+        private TableLayoutPanel tableLayoutPanel14;
+        private Label lblPartido3_1;
+        private TableLayoutPanel tableLayoutPanel15;
+        private Label lblPartido3_2;
+        private TableLayoutPanel tableLayoutPanel16;
+        private Label lblHoraPartido3;
+        private Guna.UI2.WinForms.Guna2Button btnApostar3;
+        private PictureBox pictureBox7;
         private TableLayoutPanel tableLayoutPanel18;
         private PictureBox pictureBox10;
         private PictureBox pictureBoxPartido4_1;
@@ -1034,9 +1046,6 @@
         private Label lblPartido4_2;
         private TableLayoutPanel tableLayoutPanel21;
         private Label lblHoraPartido4;
-        private Guna.UI2.WinForms.Guna2Button btnApostar2;
-        private Guna.UI2.WinForms.Guna2Button btnApostar3;
         private Guna.UI2.WinForms.Guna2Button btnApostar4;
-        private Guna.UI2.WinForms.Guna2Button btnApostar1;
     }
 }
