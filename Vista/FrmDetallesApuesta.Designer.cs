@@ -71,7 +71,10 @@
             label3 = new Label();
             tableLayoutPanel8 = new TableLayoutPanel();
             btnConfirmarApuesta = new Guna.UI2.WinForms.Guna2Button();
+            tableLayoutPanel9 = new TableLayoutPanel();
             label2 = new Label();
+            label10 = new Label();
+            label11 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel3.SuspendLayout();
             panel1.SuspendLayout();
@@ -84,6 +87,7 @@
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel8.SuspendLayout();
+            tableLayoutPanel9.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -138,7 +142,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.5F));
             tableLayoutPanel2.Controls.Add(tableLayoutPanel4, 1, 2);
             tableLayoutPanel2.Controls.Add(tableLayoutPanel6, 1, 3);
-            tableLayoutPanel2.Controls.Add(label2, 1, 1);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel9, 1, 1);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -228,11 +232,11 @@
             // 
             lbldetalleapuesta1.Anchor = AnchorStyles.None;
             lbldetalleapuesta1.AutoSize = true;
-            lbldetalleapuesta1.Font = new Font("Inria Sans", 10F, FontStyle.Bold);
+            lbldetalleapuesta1.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
             lbldetalleapuesta1.ForeColor = Color.White;
-            lbldetalleapuesta1.Location = new Point(366, 123);
+            lbldetalleapuesta1.Location = new Point(364, 123);
             lbldetalleapuesta1.Name = "lbldetalleapuesta1";
-            lbldetalleapuesta1.Size = new Size(65, 19);
+            lbldetalleapuesta1.Size = new Size(69, 19);
             lbldetalleapuesta1.TabIndex = 3;
             lbldetalleapuesta1.Text = "label2";
             // 
@@ -240,11 +244,11 @@
             // 
             lbldetalleapuesta2.Anchor = AnchorStyles.None;
             lbldetalleapuesta2.AutoSize = true;
-            lbldetalleapuesta2.Font = new Font("Inria Sans", 10F, FontStyle.Bold);
+            lbldetalleapuesta2.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
             lbldetalleapuesta2.ForeColor = Color.White;
-            lbldetalleapuesta2.Location = new Point(750, 123);
+            lbldetalleapuesta2.Location = new Point(748, 123);
             lbldetalleapuesta2.Name = "lbldetalleapuesta2";
-            lbldetalleapuesta2.Size = new Size(65, 19);
+            lbldetalleapuesta2.Size = new Size(69, 19);
             lbldetalleapuesta2.TabIndex = 4;
             lbldetalleapuesta2.Text = "label3";
             // 
@@ -348,6 +352,7 @@
             txtConfirmacionApuestaGnanciaEstimada.Margin = new Padding(4, 5, 4, 5);
             txtConfirmacionApuestaGnanciaEstimada.Name = "txtConfirmacionApuestaGnanciaEstimada";
             txtConfirmacionApuestaGnanciaEstimada.PlaceholderText = "";
+            txtConfirmacionApuestaGnanciaEstimada.ReadOnly = true;
             txtConfirmacionApuestaGnanciaEstimada.SelectedText = "";
             txtConfirmacionApuestaGnanciaEstimada.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtConfirmacionApuestaGnanciaEstimada.Size = new Size(277, 36);
@@ -579,17 +584,62 @@
             btnConfirmarApuesta.Text = "CONFIRMAR APUESTA";
             btnConfirmarApuesta.Click += btnConfirmarApuesta_Click_1;
             // 
+            // tableLayoutPanel9
+            // 
+            tableLayoutPanel9.ColumnCount = 5;
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.81895F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 13.8747883F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 19.2047386F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.2131977F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.8883247F));
+            tableLayoutPanel9.Controls.Add(label2, 2, 1);
+            tableLayoutPanel9.Controls.Add(label10, 1, 1);
+            tableLayoutPanel9.Controls.Add(label11, 3, 1);
+            tableLayoutPanel9.Dock = DockStyle.Fill;
+            tableLayoutPanel9.Location = new Point(21, 16);
+            tableLayoutPanel9.Name = "tableLayoutPanel9";
+            tableLayoutPanel9.RowCount = 3;
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 0F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 0F));
+            tableLayoutPanel9.Size = new Size(1182, 35);
+            tableLayoutPanel9.TabIndex = 22;
+            // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
             label2.Font = new Font("Rubik Mono One", 13.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(252, 206, 66);
-            label2.Location = new Point(517, 19);
+            label2.Location = new Point(499, 0);
             label2.Name = "label2";
             label2.Size = new Size(190, 35);
-            label2.TabIndex = 19;
+            label2.TabIndex = 20;
             label2.Text = "EQUIPOS";
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.Bottom;
+            label10.AutoSize = true;
+            label10.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(368, 7);
+            label10.Name = "label10";
+            label10.Size = new Size(62, 28);
+            label10.TabIndex = 21;
+            label10.Text = "Local";
+            // 
+            // label11
+            // 
+            label11.Anchor = AnchorStyles.Bottom;
+            label11.AutoSize = true;
+            label11.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(742, 7);
+            label11.Name = "label11";
+            label11.Size = new Size(100, 28);
+            label11.TabIndex = 22;
+            label11.Text = "Visitante";
             // 
             // tableLayoutPanel1
             // 
@@ -623,7 +673,6 @@
             tableLayoutPanel3.PerformLayout();
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel2.PerformLayout();
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDetalleApuestas1).EndInit();
@@ -635,6 +684,8 @@
             tableLayoutPanel7.ResumeLayout(false);
             tableLayoutPanel7.PerformLayout();
             tableLayoutPanel8.ResumeLayout(false);
+            tableLayoutPanel9.ResumeLayout(false);
+            tableLayoutPanel9.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -645,7 +696,6 @@
         private Label label1;
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel2;
-        private Label label2;
         private TableLayoutPanel tableLayoutPanel4;
         private PictureBox pictureBoxDetalleApuestas1;
         private PictureBox pictureBoxDetalleApuestas2;
@@ -672,5 +722,9 @@
         private Label label9;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Label lblHora;
+        private Label label2;
+        private TableLayoutPanel tableLayoutPanel9;
+        private Label label10;
+        private Label label11;
     }
 }

@@ -32,16 +32,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -51,19 +41,8 @@
             dtpReportesFecha = new Guna.UI2.WinForms.Guna2DateTimePicker();
             btnReportesBuscar = new Guna.UI2.WinForms.Guna2Button();
             tableLayoutPanel6 = new TableLayoutPanel();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            txtReportesGananciaTotal = new Guna.UI2.WinForms.Guna2TextBox();
-            txtReportesVentaTotal = new Guna.UI2.WinForms.Guna2TextBox();
-            txtReportesGanadores = new Guna.UI2.WinForms.Guna2TextBox();
-            label4 = new Label();
-            label5 = new Label();
-            label8 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            txtReportesTicket = new Guna.UI2.WinForms.Guna2TextBox();
-            txtReportesPerdedores = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
-            tableLayoutPanel8 = new TableLayoutPanel();
+            dgvTicketsDelDia = new DataGridView();
             tableLayoutPanel3 = new TableLayoutPanel();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
@@ -71,7 +50,7 @@
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTicketsDelDia).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -141,10 +120,10 @@
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.ColumnCount = 4;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40.8668747F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.4210529F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.8761616F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.7585144F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40.8985252F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.4353218F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.8993034F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.7668476F));
             tableLayoutPanel4.Controls.Add(label9, 0, 1);
             tableLayoutPanel4.Controls.Add(dtpReportesFecha, 1, 1);
             tableLayoutPanel4.Controls.Add(btnReportesBuscar, 2, 1);
@@ -152,9 +131,9 @@
             tableLayoutPanel4.Location = new Point(23, 71);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 3;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 36.3095245F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 34.52381F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 29.166666F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 34.4243774F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 37.9232521F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 27.6523685F));
             tableLayoutPanel4.Size = new Size(1332, 175);
             tableLayoutPanel4.TabIndex = 20;
             // 
@@ -172,7 +151,7 @@
             // 
             // dtpReportesFecha
             // 
-            dtpReportesFecha.Anchor = AnchorStyles.Bottom;
+            dtpReportesFecha.Anchor = AnchorStyles.Left;
             dtpReportesFecha.BorderColor = SystemColors.ActiveCaption;
             dtpReportesFecha.BorderRadius = 5;
             dtpReportesFecha.Checked = true;
@@ -188,7 +167,7 @@
             dtpReportesFecha.ShadowDecoration.CustomizableEdges = customizableEdges2;
             dtpReportesFecha.Size = new Size(239, 54);
             dtpReportesFecha.TabIndex = 40;
-            dtpReportesFecha.Value = new DateTime(2025, 4, 5, 11, 8, 9, 112);
+            dtpReportesFecha.Value = new DateTime(2025, 4, 10, 0, 0, 0, 0);
             // 
             // btnReportesBuscar
             // 
@@ -214,242 +193,18 @@
             // 
             tableLayoutPanel6.ColumnCount = 1;
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Controls.Add(tableLayoutPanel7, 0, 2);
             tableLayoutPanel6.Controls.Add(label3, 0, 1);
-            tableLayoutPanel6.Controls.Add(tableLayoutPanel8, 0, 3);
+            tableLayoutPanel6.Controls.Add(dgvTicketsDelDia, 0, 2);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Location = new Point(23, 252);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 4;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 2.46575332F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 9.289618F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 63.1147537F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 82.1029053F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 6.2639823F));
             tableLayoutPanel6.Size = new Size(1332, 447);
             tableLayoutPanel6.TabIndex = 21;
-            // 
-            // tableLayoutPanel7
-            // 
-            tableLayoutPanel7.ColumnCount = 6;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.5F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.25F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.25F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.25F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.25F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.5F));
-            tableLayoutPanel7.Controls.Add(txtReportesGananciaTotal, 1, 5);
-            tableLayoutPanel7.Controls.Add(txtReportesVentaTotal, 4, 2);
-            tableLayoutPanel7.Controls.Add(txtReportesGanadores, 3, 2);
-            tableLayoutPanel7.Controls.Add(label4, 1, 1);
-            tableLayoutPanel7.Controls.Add(label5, 2, 1);
-            tableLayoutPanel7.Controls.Add(label8, 1, 4);
-            tableLayoutPanel7.Controls.Add(label6, 3, 1);
-            tableLayoutPanel7.Controls.Add(label7, 4, 1);
-            tableLayoutPanel7.Controls.Add(txtReportesTicket, 1, 2);
-            tableLayoutPanel7.Controls.Add(txtReportesPerdedores, 2, 2);
-            tableLayoutPanel7.Dock = DockStyle.Fill;
-            tableLayoutPanel7.Location = new Point(3, 55);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 7;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 1.81818187F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 15.757576F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 30.30303F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 1.81818187F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 15.757576F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 30.30303F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 4.242424F));
-            tableLayoutPanel7.Size = new Size(1326, 276);
-            tableLayoutPanel7.TabIndex = 25;
-            // 
-            // txtReportesGananciaTotal
-            // 
-            txtReportesGananciaTotal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtReportesGananciaTotal.BorderColor = SystemColors.ActiveCaption;
-            txtReportesGananciaTotal.BorderRadius = 10;
-            txtReportesGananciaTotal.CustomizableEdges = customizableEdges5;
-            txtReportesGananciaTotal.DefaultText = "";
-            txtReportesGananciaTotal.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtReportesGananciaTotal.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtReportesGananciaTotal.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesGananciaTotal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesGananciaTotal.FillColor = Color.FromArgb(12, 12, 12);
-            txtReportesGananciaTotal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesGananciaTotal.Font = new Font("Inria Sans", 8.999999F);
-            txtReportesGananciaTotal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesGananciaTotal.Location = new Point(23, 184);
-            txtReportesGananciaTotal.Margin = new Padding(4, 5, 4, 5);
-            txtReportesGananciaTotal.Name = "txtReportesGananciaTotal";
-            txtReportesGananciaTotal.PlaceholderText = "";
-            txtReportesGananciaTotal.ReadOnly = true;
-            txtReportesGananciaTotal.SelectedText = "";
-            txtReportesGananciaTotal.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtReportesGananciaTotal.Size = new Size(313, 42);
-            txtReportesGananciaTotal.TabIndex = 35;
-            txtReportesGananciaTotal.TabStop = false;
-            // 
-            // txtReportesVentaTotal
-            // 
-            txtReportesVentaTotal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtReportesVentaTotal.BorderColor = SystemColors.ActiveCaption;
-            txtReportesVentaTotal.BorderRadius = 10;
-            txtReportesVentaTotal.CustomizableEdges = customizableEdges7;
-            txtReportesVentaTotal.DefaultText = "";
-            txtReportesVentaTotal.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtReportesVentaTotal.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtReportesVentaTotal.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesVentaTotal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesVentaTotal.FillColor = Color.FromArgb(12, 12, 12);
-            txtReportesVentaTotal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesVentaTotal.Font = new Font("Inria Sans", 8.999999F);
-            txtReportesVentaTotal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesVentaTotal.Location = new Point(986, 53);
-            txtReportesVentaTotal.Margin = new Padding(4, 5, 4, 5);
-            txtReportesVentaTotal.Name = "txtReportesVentaTotal";
-            txtReportesVentaTotal.PlaceholderText = "";
-            txtReportesVentaTotal.ReadOnly = true;
-            txtReportesVentaTotal.SelectedText = "";
-            txtReportesVentaTotal.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtReportesVentaTotal.Size = new Size(313, 41);
-            txtReportesVentaTotal.TabIndex = 34;
-            txtReportesVentaTotal.TabStop = false;
-            // 
-            // txtReportesGanadores
-            // 
-            txtReportesGanadores.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtReportesGanadores.BorderColor = SystemColors.ActiveCaption;
-            txtReportesGanadores.BorderRadius = 10;
-            txtReportesGanadores.CustomizableEdges = customizableEdges9;
-            txtReportesGanadores.DefaultText = "";
-            txtReportesGanadores.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtReportesGanadores.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtReportesGanadores.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesGanadores.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesGanadores.FillColor = Color.FromArgb(12, 12, 12);
-            txtReportesGanadores.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesGanadores.Font = new Font("Inria Sans", 8.999999F);
-            txtReportesGanadores.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesGanadores.Location = new Point(665, 53);
-            txtReportesGanadores.Margin = new Padding(4, 5, 4, 5);
-            txtReportesGanadores.Name = "txtReportesGanadores";
-            txtReportesGanadores.PlaceholderText = "";
-            txtReportesGanadores.ReadOnly = true;
-            txtReportesGanadores.SelectedText = "";
-            txtReportesGanadores.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtReportesGanadores.Size = new Size(313, 41);
-            txtReportesGanadores.TabIndex = 33;
-            txtReportesGanadores.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Bottom;
-            label4.AutoSize = true;
-            label4.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(131, 20);
-            label4.Name = "label4";
-            label4.Size = new Size(97, 28);
-            label4.TabIndex = 25;
-            label4.Text = "TICKETS:";
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Bottom;
-            label5.AutoSize = true;
-            label5.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(428, 20);
-            label5.Name = "label5";
-            label5.Size = new Size(145, 28);
-            label5.TabIndex = 26;
-            label5.Text = "PERDEDORES:";
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.Bottom;
-            label8.AutoSize = true;
-            label8.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(88, 151);
-            label8.Name = "label8";
-            label8.Size = new Size(183, 28);
-            label8.TabIndex = 29;
-            label8.Text = "GANANCIA TOTAL:";
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Bottom;
-            label6.AutoSize = true;
-            label6.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(754, 20);
-            label6.Name = "label6";
-            label6.Size = new Size(135, 28);
-            label6.TabIndex = 30;
-            label6.Text = "GANADORES:";
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.Bottom;
-            label7.AutoSize = true;
-            label7.Font = new Font("Inria Sans", 11F, FontStyle.Bold);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(1069, 20);
-            label7.Name = "label7";
-            label7.Size = new Size(146, 28);
-            label7.TabIndex = 28;
-            label7.Text = "VENTA TOTAL:";
-            // 
-            // txtReportesTicket
-            // 
-            txtReportesTicket.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtReportesTicket.BorderColor = SystemColors.ActiveCaption;
-            txtReportesTicket.BorderRadius = 10;
-            txtReportesTicket.CustomizableEdges = customizableEdges11;
-            txtReportesTicket.DefaultText = "";
-            txtReportesTicket.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtReportesTicket.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtReportesTicket.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesTicket.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesTicket.FillColor = Color.FromArgb(12, 12, 12);
-            txtReportesTicket.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesTicket.Font = new Font("Inria Sans", 8.999999F);
-            txtReportesTicket.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesTicket.Location = new Point(23, 53);
-            txtReportesTicket.Margin = new Padding(4, 5, 4, 5);
-            txtReportesTicket.Name = "txtReportesTicket";
-            txtReportesTicket.PlaceholderText = "";
-            txtReportesTicket.ReadOnly = true;
-            txtReportesTicket.SelectedText = "";
-            txtReportesTicket.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtReportesTicket.Size = new Size(313, 42);
-            txtReportesTicket.TabIndex = 37;
-            txtReportesTicket.TabStop = false;
-            // 
-            // txtReportesPerdedores
-            // 
-            txtReportesPerdedores.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtReportesPerdedores.BorderColor = SystemColors.ActiveCaption;
-            txtReportesPerdedores.BorderRadius = 10;
-            txtReportesPerdedores.CustomizableEdges = customizableEdges13;
-            txtReportesPerdedores.DefaultText = "";
-            txtReportesPerdedores.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtReportesPerdedores.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtReportesPerdedores.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesPerdedores.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtReportesPerdedores.FillColor = Color.FromArgb(12, 12, 12);
-            txtReportesPerdedores.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesPerdedores.Font = new Font("Inria Sans", 8.999999F);
-            txtReportesPerdedores.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtReportesPerdedores.Location = new Point(344, 53);
-            txtReportesPerdedores.Margin = new Padding(4, 5, 4, 5);
-            txtReportesPerdedores.Name = "txtReportesPerdedores";
-            txtReportesPerdedores.PlaceholderText = "";
-            txtReportesPerdedores.ReadOnly = true;
-            txtReportesPerdedores.SelectedText = "";
-            txtReportesPerdedores.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtReportesPerdedores.Size = new Size(313, 42);
-            txtReportesPerdedores.TabIndex = 38;
-            txtReportesPerdedores.TabStop = false;
             // 
             // label3
             // 
@@ -463,17 +218,24 @@
             label3.TabIndex = 22;
             label3.Text = "DETALLES";
             // 
-            // tableLayoutPanel8
+            // dgvTicketsDelDia
             // 
-            tableLayoutPanel8.ColumnCount = 1;
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.660965F));
-            tableLayoutPanel8.Dock = DockStyle.Fill;
-            tableLayoutPanel8.Location = new Point(3, 337);
-            tableLayoutPanel8.Name = "tableLayoutPanel8";
-            tableLayoutPanel8.RowCount = 1;
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 9.302325F));
-            tableLayoutPanel8.Size = new Size(1326, 107);
-            tableLayoutPanel8.TabIndex = 24;
+            dgvTicketsDelDia.AllowUserToAddRows = false;
+            dgvTicketsDelDia.AllowUserToDeleteRows = false;
+            dgvTicketsDelDia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTicketsDelDia.BackgroundColor = Color.FromArgb(12, 12, 12);
+            dgvTicketsDelDia.BorderStyle = BorderStyle.Fixed3D;
+            dgvTicketsDelDia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTicketsDelDia.Dock = DockStyle.Fill;
+            dgvTicketsDelDia.Location = new Point(3, 55);
+            dgvTicketsDelDia.MultiSelect = false;
+            dgvTicketsDelDia.Name = "dgvTicketsDelDia";
+            dgvTicketsDelDia.ReadOnly = true;
+            dgvTicketsDelDia.RowHeadersVisible = false;
+            dgvTicketsDelDia.RowHeadersWidth = 62;
+            dgvTicketsDelDia.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTicketsDelDia.Size = new Size(1326, 360);
+            dgvTicketsDelDia.TabIndex = 25;
             // 
             // tableLayoutPanel3
             // 
@@ -523,8 +285,7 @@
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
-            tableLayoutPanel7.ResumeLayout(false);
-            tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTicketsDelDia).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();
             ResumeLayout(false);
@@ -544,17 +305,6 @@
         private Guna.UI2.WinForms.Guna2Button btnReportesBuscar;
         private TableLayoutPanel tableLayoutPanel6;
         private Label label3;
-        private TableLayoutPanel tableLayoutPanel8;
-        private TableLayoutPanel tableLayoutPanel7;
-        private Guna.UI2.WinForms.Guna2TextBox txtReportesGananciaTotal;
-        private Guna.UI2.WinForms.Guna2TextBox txtReportesVentaTotal;
-        private Guna.UI2.WinForms.Guna2TextBox txtReportesGanadores;
-        private Label label4;
-        private Label label5;
-        private Label label8;
-        private Label label6;
-        private Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox txtReportesTicket;
-        private Guna.UI2.WinForms.Guna2TextBox txtReportesPerdedores;
+        private DataGridView dgvTicketsDelDia;
     }
 }

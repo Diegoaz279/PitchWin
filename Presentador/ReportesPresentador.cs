@@ -22,25 +22,23 @@ namespace PitchWin.Presentador
             {
                 using (var context = new PitchWinDbContext())
                 {
-                    // Usamos solo la parte de la fecha para filtrar
-                    DateTime fecha = _vista.FechaSeleccionada.Date;
+                    var tickets = await (from t in context.Tickets
+                                         join u in context.Usuarios on t.UsuarioId equals u.Id
+                                         where t.FechaApuesta.Date == _vista.FechaSeleccionada.Date
+                                         select new TicketConUsuario
+                                         {
+                                             NombreUsuario = u.Nombre,
+                                             EquipoLocal = t.EquipoLocal,
+                                             EquipoVisitante = t.EquipoVisitante,
+                                             TipoCuota = t.TipoCuota,
+                                             Monto = t.Monto,
+                                             GananciaEstimada = t.GananciaEstimada,
+                                             FechaApuesta = t.FechaApuesta,
+                                             Estado = t.Estado
+                                         }).ToListAsync();
 
-                    // Se invoca el procedimiento almacenado y se materializa la lista
-                    var resultados = await context.Reportes
-                        .FromSqlRaw("EXEC GenerarReporte @Fecha = {0}", fecha)
-                        .ToListAsync();
-
-                    var reporte = resultados.FirstOrDefault();
-
-                    if (reporte != null)
-                    {
-                        _vista.MostrarReporte(reporte);
-                    }
-                    else
-                    {
-                        await _vista.MostrarError("No se encontraron datos de reporte para la fecha seleccionada.");
-                        _vista.LimpiarReportes();
-                    }
+                    // Llamamos al nuevo método
+                    _vista.MostrarTicketsConUsuario(tickets);
                 }
             }
             catch (Exception ex)

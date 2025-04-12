@@ -86,7 +86,12 @@ namespace PitchWin.Vista
 
                     if (!esGanador)
                     {
-                        MessageBox.Show("La apuesta no es ganadora.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("La apuesta no es ganadora o El juego aún está en Curso.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    if (ticket.Estado == "Pagado")
+                    {
+                        MessageBox.Show("El ticket ya se pago y no se puede pagar 2 veces.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     else
@@ -133,14 +138,14 @@ namespace PitchWin.Vista
                         return;
                     }
 
-                    // Verificar que el ticket tenga el estado "Ganador"
+                    //Si no es ganador, no permitir pago
                     if (ticket.Estado != "Ganador")
                     {
                         MessageBox.Show("La apuesta no es ganadora y no puede ser pagada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 
-                    // Actualizar el ticket a "Pagado"
+                    //Actualizar a Pagado
                     ticket.Estado = "Pagado";
                     ticket.FechaPago = DateTime.Now;
                     await context.SaveChangesAsync();

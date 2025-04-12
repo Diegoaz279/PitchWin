@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PitchWin.Vista
-{
+{   //Este formulario solo gestiona la parte visual (UI) de los reportes.
+    //Puede ser usado como una implementación de IReportesView sin afectar al presentador.
     public partial class FrmReportes : Form, IReportesView
     {
         private ReportesPresentador _presentador;
@@ -20,6 +21,36 @@ namespace PitchWin.Vista
         {
             InitializeComponent();
             _presentador = new ReportesPresentador(this);
+            EstilizarDataGrid();
+        }
+        private void EstilizarDataGrid()
+        {
+            dgvTicketsDelDia.EnableHeadersVisualStyles = false;
+            dgvTicketsDelDia.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 30, 30);
+            dgvTicketsDelDia.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvTicketsDelDia.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgvTicketsDelDia.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgvTicketsDelDia.DefaultCellStyle.BackColor = Color.White;
+            dgvTicketsDelDia.DefaultCellStyle.ForeColor = Color.Black;
+            dgvTicketsDelDia.DefaultCellStyle.SelectionBackColor = Color.FromArgb(60, 120, 200);
+            dgvTicketsDelDia.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvTicketsDelDia.GridColor = Color.LightGray;
+            dgvTicketsDelDia.BorderStyle = BorderStyle.None;
+        }
+        public void MostrarTicketsConUsuario(List<TicketConUsuario> tickets)
+        {
+            dgvTicketsDelDia.DataSource = null;
+            dgvTicketsDelDia.DataSource = tickets;
+
+            // Estilo personalizado
+            dgvTicketsDelDia.Columns["NombreUsuario"].HeaderText = "Usuario";
+            dgvTicketsDelDia.Columns["EquipoLocal"].HeaderText = "Equipo Local";
+            dgvTicketsDelDia.Columns["EquipoVisitante"].HeaderText = "Equipo Visitante";
+            dgvTicketsDelDia.Columns["TipoCuota"].HeaderText = "Tipo de Cuota";
+            dgvTicketsDelDia.Columns["Monto"].DefaultCellStyle.Format = "C";
+            dgvTicketsDelDia.Columns["GananciaEstimada"].DefaultCellStyle.Format = "C";
+            dgvTicketsDelDia.Columns["FechaApuesta"].DefaultCellStyle.Format = "g";
+            dgvTicketsDelDia.Columns["Estado"].HeaderText = "Estado";
         }
 
         // La propiedad fecha seleccionada proviene del DateTimePicker (por ejemplo, dtpReportesFecha)
@@ -31,11 +62,7 @@ namespace PitchWin.Vista
         // Muestra los datos del reporte en los TextBox correspondientes
         public void MostrarReporte(Reporte reporte)
         {
-            txtReportesTicket.Text = reporte.TotalTickets.ToString();
-            txtReportesGanadores.Text = reporte.Ganadores.ToString();
-            txtReportesPerdedores.Text = reporte.Perdedores.ToString();
-            txtReportesVentaTotal.Text = reporte.VentaTotal.ToString("C");
-            txtReportesGananciaTotal.Text = reporte.GananciaTotal.ToString("C");
+            
 
             // Si decides mostrar los pendientes:
             // txtReportesTicketsSinPagar.Text = reporte.TicketsSinPagar.ToString();
@@ -52,14 +79,12 @@ namespace PitchWin.Vista
 
         public void LimpiarReportes()
         {
-            txtReportesTicket.Clear();
-            txtReportesGanadores.Clear();
-            txtReportesPerdedores.Clear();
-            txtReportesVentaTotal.Clear();
-            txtReportesGananciaTotal.Clear();
-
-            // Si se usan los controles de pendientes:
-            // txtReportesTicketsSinPagar.Clear();
-            // txtReportesMontoTicketsSinPagar.Clear();
+           
         }
+        public void MostrarTicketsDelDia(List<Ticket> tickets)
+        {
+            dgvTicketsDelDia.DataSource = null;
+            dgvTicketsDelDia.DataSource = tickets;
+        }
+    
 }   }

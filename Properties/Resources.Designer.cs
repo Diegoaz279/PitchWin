@@ -173,6 +173,16 @@ namespace PitchWin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2025_04_10_123640 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2025-04-10 123640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_1_abr_2025__10_41_29_a_m_ {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 1 abr 2025, 10_41_29 a.m.", resourceCulture);
@@ -193,6 +203,16 @@ namespace PitchWin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_10_abr_2025__02_55_24_a_m_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 10 abr 2025, 02_55_24 a.m.", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_31_mar_2025__02_14_43_p_m_ {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 31 mar 2025, 02_14_43 p.m.", resourceCulture);
@@ -206,6 +226,26 @@ namespace PitchWin.Properties {
         internal static System.Drawing.Bitmap depositphotos_300867228_stock_illustration_versus_sign_black_and_white {
             get {
                 object obj = ResourceManager.GetObject("depositphotos_300867228-stock-illustration-versus-sign-black-and-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_carga {
+            get {
+                object obj = ResourceManager.GetObject("icons8-carga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading_7528_256 {
+            get {
+                object obj = ResourceManager.GetObject("loading-7528_256", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

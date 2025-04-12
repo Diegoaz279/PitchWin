@@ -67,14 +67,14 @@
             // 
             btnAyuda.Dock = DockStyle.Top;
             btnAyuda.FlatAppearance.BorderSize = 0;
-            btnAyuda.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 40, 80);
-            btnAyuda.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
+            btnAyuda.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 20, 19);
+            btnAyuda.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 25, 19);
             btnAyuda.FlatStyle = FlatStyle.Flat;
             btnAyuda.Font = new Font("Inria Sans", 14F);
             btnAyuda.ForeColor = Color.FromArgb(252, 206, 66);
             btnAyuda.Image = PitchWin.Properties.Resources.BTNAYUDA;
             btnAyuda.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAyuda.Location = new Point(0, 509);
+            btnAyuda.Location = new Point(0, 536);
             btnAyuda.Name = "btnAyuda";
             btnAyuda.Padding = new Padding(5, 0, 0, 0);
             btnAyuda.Size = new Size(401, 91);
@@ -89,14 +89,14 @@
             // 
             btnReportes.Dock = DockStyle.Top;
             btnReportes.FlatAppearance.BorderSize = 0;
-            btnReportes.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 40, 80);
-            btnReportes.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
+            btnReportes.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 20, 19);
+            btnReportes.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 25, 19);
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Inria Sans", 14F);
             btnReportes.ForeColor = Color.FromArgb(252, 206, 66);
             btnReportes.Image = PitchWin.Properties.Resources.BTNREPORTE;
             btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReportes.Location = new Point(0, 418);
+            btnReportes.Location = new Point(0, 445);
             btnReportes.Name = "btnReportes";
             btnReportes.Padding = new Padding(5, 0, 0, 0);
             btnReportes.Size = new Size(401, 91);
@@ -111,14 +111,14 @@
             // 
             btnPagarTicket.Dock = DockStyle.Top;
             btnPagarTicket.FlatAppearance.BorderSize = 0;
-            btnPagarTicket.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 40, 80);
-            btnPagarTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
+            btnPagarTicket.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 20, 19);
+            btnPagarTicket.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 25, 19);
             btnPagarTicket.FlatStyle = FlatStyle.Flat;
             btnPagarTicket.Font = new Font("Inria Sans", 14F);
             btnPagarTicket.ForeColor = Color.FromArgb(252, 206, 66);
             btnPagarTicket.Image = PitchWin.Properties.Resources.BTNTICKET;
             btnPagarTicket.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPagarTicket.Location = new Point(0, 327);
+            btnPagarTicket.Location = new Point(0, 354);
             btnPagarTicket.Name = "btnPagarTicket";
             btnPagarTicket.Padding = new Padding(5, 0, 0, 0);
             btnPagarTicket.Size = new Size(401, 91);
@@ -133,14 +133,14 @@
             // 
             btnApuestas.Dock = DockStyle.Top;
             btnApuestas.FlatAppearance.BorderSize = 0;
-            btnApuestas.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 40, 80);
-            btnApuestas.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
+            btnApuestas.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 20, 19);
+            btnApuestas.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 25, 19);
             btnApuestas.FlatStyle = FlatStyle.Flat;
             btnApuestas.Font = new Font("Inria Sans", 14F);
             btnApuestas.ForeColor = Color.FromArgb(252, 206, 66);
             btnApuestas.Image = PitchWin.Properties.Resources.ChatGPT_Image_10_abr_2025__02_33_05_a_m_;
             btnApuestas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnApuestas.Location = new Point(0, 236);
+            btnApuestas.Location = new Point(0, 263);
             btnApuestas.Name = "btnApuestas";
             btnApuestas.Padding = new Padding(5, 0, 0, 0);
             btnApuestas.Size = new Size(401, 91);
@@ -155,14 +155,14 @@
             // 
             btnInicio.Dock = DockStyle.Top;
             btnInicio.FlatAppearance.BorderSize = 0;
-            btnInicio.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 40, 80);
-            btnInicio.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
+            btnInicio.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 20, 19);
+            btnInicio.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 25, 19);
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Inria Sans", 14F);
             btnInicio.ForeColor = Color.FromArgb(252, 206, 66);
             btnInicio.Image = (Image)resources.GetObject("btnInicio.Image");
             btnInicio.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInicio.Location = new Point(0, 145);
+            btnInicio.Location = new Point(0, 172);
             btnInicio.Name = "btnInicio";
             btnInicio.Padding = new Padding(5, 0, 0, 0);
             btnInicio.Size = new Size(401, 91);
@@ -177,8 +177,8 @@
             // 
             btnExit.Dock = DockStyle.Bottom;
             btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 40, 80);
-            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 20, 80);
+            btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 20, 19);
+            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 25, 19);
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Inria Sans", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExit.ForeColor = Color.FromArgb(252, 206, 66);
@@ -202,13 +202,13 @@
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(401, 145);
+            panelLogo.Size = new Size(401, 172);
             panelLogo.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = PitchWin.Properties.Resources.ChatGPT_Image_10_abr_2025__02_55_24_a_m_;
             pictureBox1.Location = new Point(51, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 136);

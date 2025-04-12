@@ -4,7 +4,8 @@ using PlayerUI;
 using System;
 
 namespace PitchWin.Presentador
-{
+{   
+    //Esta clase tiene una única responsabilidad: gestionar el inicio de sesión.
     public class LoginPresentador
     {
     private readonly ILoginVista _vista;

@@ -33,7 +33,6 @@ namespace PlayerUI
             PanelInicio.Controls.Clear();
             PanelInicio.Controls.Add(formHijo);
             PanelInicio.Tag = formHijo;
-            // No asignamos Owner aquí porque el formulario queda incrustado.
             formHijo.Show();
         }
 
@@ -44,6 +43,7 @@ namespace PlayerUI
 
             // Llamar al método para cargar automáticamente el formulario de inicio
             menu.CargarFrmInicioo();
+          
         }
 
         private void btnExit_Click(object sender, EventArgs e)

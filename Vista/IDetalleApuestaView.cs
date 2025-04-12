@@ -15,7 +15,7 @@ namespace PitchWin.Vista
         decimal MontoApuesta { get; }        // Ingresado en un TextBox
 
         // Propiedad para mostrar la ganancia estimada en la vista
-        decimal GananciaEstimad { get; set; }
+        decimal GananciaEstimad { get; set; } 
 
         // Métodos para mostrar mensajes en la vista
         Task MostrarError(string mensaje);

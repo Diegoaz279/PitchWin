@@ -9,7 +9,7 @@ namespace PitchWin.Modelo
     public class ApiMLBService : IApiMLBService
     {
         private readonly HttpClient _client;
-        private readonly string _apiKey = "183299f8ef0bba52382876bb7745c3e6";  // Tu API key
+        private readonly string _apiKey = "183299f8ef0bba52382876bb7745c3e6";  //API key
         private readonly string _urlPartidos = "https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/";
         private readonly string _urlEquipos = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams";
 
@@ -59,20 +59,25 @@ namespace PitchWin.Modelo
                 string jsonResponse = await response.Content.ReadAsStringAsync();
                 JObject root = JObject.Parse(jsonResponse);
                 var equipos = root["sports"][0]["leagues"][0]["teams"];
+
                 foreach (var equipo in equipos)
                 {
                     var team = equipo["team"];
                     if (team["displayName"].ToString().Equals(nombreEquipo, StringComparison.OrdinalIgnoreCase))
                     {
-                        return team["logos"][0]["href"].ToString();
+                        return team["logos"]?[0]?["href"]?.ToString() ?? string.Empty;
                     }
                 }
+
+                // Si no se encuentra el equipo, devuelve string vacío
                 return string.Empty;
             }
-            catch (Exception ex)
+            catch
             {
-                throw new Exception("Error al obtener el logo del equipo", ex);
+                // Si ocurre un error, también devuelve string vacío
+                return string.Empty;
             }
         }
+
     }
 }

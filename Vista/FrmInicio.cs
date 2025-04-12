@@ -36,12 +36,18 @@ namespace PitchWin.Vista
 
         public void SetLogoEquipoLocal(string logoUrl)
         {
-            pictureBoxInicio1.Load(logoUrl);
+            if (!string.IsNullOrEmpty(logoUrl))
+            {
+                pictureBoxInicio1.Load(logoUrl);
+            }
         }
 
         public void SetLogoEquipoVisitante(string logoUrl)
         {
-            pictureBoxInicio2.Load(logoUrl);
+            if (!string.IsNullOrEmpty(logoUrl))
+            {
+                pictureBoxInicio2.Load(logoUrl);
+            }
         }
 
         public async Task ShowError(string mensaje)

@@ -33,31 +33,49 @@ namespace PitchWin.Vista
                     lblPartido1_1.Text = equipoLocal;
                     lblPartido1_2.Text = equipoVisitante;
                     lblHoraPartido1.Text = horaPartido;
-                    pictureBoxPartido1_1.Load(logoLocalUrl);
-                    pictureBoxPartido1_2.Load(logoVisitanteUrl);
+
+                    if (!string.IsNullOrEmpty(logoLocalUrl))
+                        pictureBoxPartido1_1.Load(logoLocalUrl);
+                    // De lo contrario, deja la imagen por defecto
+
+                    if (!string.IsNullOrEmpty(logoVisitanteUrl))
+                        pictureBoxPartido1_2.Load(logoVisitanteUrl);
                     break;
+
                 case 2:
                     lblPartido2_1.Text = equipoLocal;
                     lblPartido2_2.Text = equipoVisitante;
                     lblHoraPartido2.Text = horaPartido;
-                    pictureBoxPartido2_1.Load(logoLocalUrl);
-                    pictureBoxPartido2_2.Load(logoVisitanteUrl);
+
+                    if (!string.IsNullOrEmpty(logoLocalUrl))
+                        pictureBoxPartido2_1.Load(logoLocalUrl);
+
+                    if (!string.IsNullOrEmpty(logoVisitanteUrl))
+                        pictureBoxPartido2_2.Load(logoVisitanteUrl);
                     break;
+
                 case 3:
                     lblPartido3_1.Text = equipoLocal;
                     lblPartido3_2.Text = equipoVisitante;
                     lblHoraPartido3.Text = horaPartido;
-                    pictureBoxPartido3_1.Load(logoLocalUrl);
-                    pictureBoxPartido3_2.Load(logoVisitanteUrl);
+
+                    if (!string.IsNullOrEmpty(logoLocalUrl))
+                        pictureBoxPartido3_1.Load(logoLocalUrl);
+
+                    if (!string.IsNullOrEmpty(logoVisitanteUrl))
+                        pictureBoxPartido3_2.Load(logoVisitanteUrl);
                     break;
+
                 case 4:
                     lblPartido4_1.Text = equipoLocal;
                     lblPartido4_2.Text = equipoVisitante;
                     lblHoraPartido4.Text = horaPartido;
-                    pictureBoxPartido4_1.Load(logoLocalUrl);
-                    pictureBoxPartido4_2.Load(logoVisitanteUrl);
-                    break;
-                default:
+
+                    if (!string.IsNullOrEmpty(logoLocalUrl))
+                        pictureBoxPartido4_1.Load(logoLocalUrl);
+
+                    if (!string.IsNullOrEmpty(logoVisitanteUrl))
+                        pictureBoxPartido4_2.Load(logoVisitanteUrl);
                     break;
             }
         }
